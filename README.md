@@ -5,6 +5,9 @@
 $ git clone https://github.com/project-oseek/oseek
 ```
 ```bash
+$ yarn set version berry
+```
+```bash
 $ yarn
 ```
 ```bash
