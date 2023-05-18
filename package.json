@@ -12,7 +12,6 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@nx/cypress": "16.2.1",
     "@nx/eslint-plugin": "16.2.1",
     "@nx/jest": "16.2.1",
     "@nx/js": "16.2.1",
@@ -27,11 +26,9 @@
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "babel-jest": "^29.4.1",
-    "cypress": "^12.11.0",
     "eslint": "~8.15.0",
     "eslint-config-next": "13.4.1",
     "eslint-config-prettier": "8.1.0",
-    "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
