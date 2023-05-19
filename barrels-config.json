@@ -1,0 +1,6 @@
+{
+  "delete": true,
+  "directory": ["./libs/lib/src"],
+  "location": "all",
+  "singleQuotes": true
+}
