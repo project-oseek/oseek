@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@oseek/lib*": ["libs/lib/src*"]
+      "@oseek/lib*": ["libs/lib/src*"],
+      "@oseek/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
