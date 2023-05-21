@@ -1,6 +1,6 @@
 {
   "delete": true,
-  "directory": ["./libs/lib/src", "./libs/ui/src"],
+  "directory": ["./libs/lib/src", "./libs/ui/src", "./libs/apis/src"],
   "location": "all",
   "singleQuotes": true
 }

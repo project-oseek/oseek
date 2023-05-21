@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@oseek/apis": ["libs/apis/src/index.ts"],
       "@oseek/lib*": ["libs/lib/src*"],
       "@oseek/ui": ["libs/ui/src/index.ts"]
     }

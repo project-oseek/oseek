@@ -1,0 +1,8 @@
+{
+  "name": "@oseek/apis",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "scripts": {
+    "generate-api:petstore": "sh ./generate-api.sh petstore v2"
+  }
+}
