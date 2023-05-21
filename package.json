@@ -16,7 +16,6 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
-    "@nx/cypress": "16.2.1",
     "@nx/devkit": "^16.2.1",
     "@nx/esbuild": "16.2.1",
     "@nx/eslint-plugin": "16.2.1",
@@ -43,13 +42,11 @@
     "@vitejs/plugin-react": "^3.0.0",
     "@vitest/ui": "^0.31.0",
     "babel-jest": "^29.4.1",
-    "cypress": "^12.11.0",
     "esbuild": "^0.17.17",
     "eslint": "~8.15.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "13.4.1",
     "eslint-config-prettier": "8.1.0",
-    "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-jsx-a11y": "6.7.1",
