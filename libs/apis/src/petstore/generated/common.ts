@@ -89,17 +89,17 @@ function setFlattenedQueryParams(urlSearchParams: URLSearchParams, parameter: an
     if (typeof parameter === "object") {
         if (Array.isArray(parameter)) {
             (parameter as any[]).forEach(item => setFlattenedQueryParams(urlSearchParams, item, key));
-        } 
+        }
         else {
-            Object.keys(parameter).forEach(currentKey => 
+            Object.keys(parameter).forEach(currentKey =>
                 setFlattenedQueryParams(urlSearchParams, parameter[currentKey], `${key}${key !== '' ? '.' : ''}${currentKey}`)
             );
         }
-    } 
+    }
     else {
         if (urlSearchParams.has(key)) {
             urlSearchParams.append(key, parameter);
-        } 
+        }
         else {
             urlSearchParams.set(key, parameter);
         }
@@ -122,9 +122,7 @@ export const setSearchParams = function (url: URL, ...objects: any[]) {
  */
 export const serializeDataIfNeeded = function (value: any, requestOptions: any, configuration?: Configuration) {
     const nonString = typeof value !== 'string';
-    const needsSerialization = nonString && configuration && configuration.isJsonMime
-        ? configuration.isJsonMime(requestOptions.headers['Content-Type'])
-        : nonString;
+    const needsSerialization = false;
     return needsSerialization
         ? JSON.stringify(value !== undefined ? value : {})
         : (value || "");

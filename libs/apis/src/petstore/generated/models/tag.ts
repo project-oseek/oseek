@@ -14,7 +14,23 @@
 
 
 
-export * from './api/pet-api';
-export * from './api/store-api';
-export * from './api/user-api';
+/**
+ * 
+ * @export
+ * @interface Tag
+ */
+export interface Tag {
+    /**
+     * 
+     * @type {number}
+     * @memberof Tag
+     */
+    'id'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof Tag
+     */
+    'name'?: string;
+}
 

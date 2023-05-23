@@ -18,6 +18,20 @@ baseAxios.interceptors.request.use(
 
 baseAxios.interceptors.response.use((response) => {
   return response;
+  // baseUrl, withCredentials, timeout 등의 세팅
+});
+
+baseAxios.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  },
+);
+
+baseAxios.interceptors.response.use((response) => {
+  return response;
 });
 
 export default baseAxios;

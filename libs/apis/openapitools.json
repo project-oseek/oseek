@@ -3,5 +3,12 @@
   "spaces": 2,
   "generator-cli": {
     "version": "6.6.0"
-  }
+  },
+  "supportsES6": true,
+  "withSeparateModelsAndApi": true,
+  "apiPackage": "api",
+  "modelPackage": "models",
+  "enumPropertyNaming": "original",
+  "enumNameSuffix": "",
+  "useSingleRequestParameter": false
 }
