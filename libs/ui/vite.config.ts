@@ -4,11 +4,13 @@ import react from '@vitejs/plugin-react';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 import dts from 'vite-plugin-dts';
 import { joinPathFragments } from '@nx/devkit';
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/button',
 
   plugins: [
+    vanillaExtractPlugin({ identifiers: 'debug' }),
     dts({
       entryRoot: 'src',
       tsConfigFilePath: joinPathFragments(__dirname, 'tsconfig.lib.json'),

@@ -9,6 +9,7 @@
     "@tanstack/react-query": "^4.29.7",
     "@vanilla-extract/css": "^1.11.0",
     "axios": "^1.4.0",
+    "clsx": "^1.2.1",
     "next": "13.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -17,6 +18,8 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-react": "^7.18.6",
     "@nx/devkit": "^16.2.1",
     "@nx/esbuild": "16.2.1",
     "@nx/eslint-plugin": "16.2.1",
@@ -40,6 +43,7 @@
     "@types/react-dom": "18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
+    "@vanilla-extract/vite-plugin": "^3.8.2",
     "@vitejs/plugin-react": "^3.0.0",
     "@vitest/ui": "^0.31.0",
     "babel-jest": "^29.4.1",
@@ -72,7 +76,13 @@
     "vitest": "^0.31.0"
   },
   "scripts": {
-    "generate-barrels": "npx barrelsby --config barrels-config.json"
+    "generate-barrels": "npx barrelsby --config barrels-config.json",
+    "storybook": "yarn nx run ui:storybook"
   },
-  "packageManager": "yarn@3.5.1"
+  "packageManager": "yarn@3.5.1",
+  "dependenciesMeta": {
+    "eslint@8.15.0": {
+      "unplugged": true
+    }
+  }
 }

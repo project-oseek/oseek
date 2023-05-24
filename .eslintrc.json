@@ -1,45 +1,27 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
-    "prettier"
-  ],
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "@nx",
-    "react",
-    "react-refresh",
-    "react-hooks",
-    "@typescript-eslint",
-    "unused-imports"
-  ],
+  "plugins": ["@nx", "react", "react-refresh", "react-hooks", "@typescript-eslint", "unused-imports"],
   "rules": {
-    "import/extensions": [
-      "off"
-    ],
+    "import/extensions": ["off"],
+
     "import/prefer-default-export": "off",
     "no-plusplus": "off",
-    "semi": [
-      "error",
-      "always"
-    ],
+    "semi": ["error", "always"],
     "react/jsx-filename-extension": [
       "error",
       {
-        "extensions": [
-          ".tsx",
-          ".jsx"
-        ]
+        "extensions": [".tsx", ".jsx"]
       }
     ],
     "import/no-extraneous-dependencies": [
-      "error",
+      "off",
       {
         "devDependencies": true
       }
@@ -47,25 +29,15 @@
     "import/order": [
       "error",
       {
-        "groups": [
-          "internal",
-          "external"
-        ]
+        "groups": ["internal", "external"]
       }
     ],
-    "@typescript-eslint/type-annotation-spacing": [
-      "error"
-    ],
-    "@typescript-eslint/method-signature-style": [
-      "error"
-    ],
-    "unused-imports/no-unused-imports": [
-      "error"
-    ],
-    "react/jsx-indent-props": [
-      "error",
-      "first"
-    ],
+    "arrow-body-style": ["off"],
+    "react/button-has-type": ["off"],
+    "@typescript-eslint/type-annotation-spacing": ["error"],
+    "@typescript-eslint/method-signature-style": ["error"],
+    "unused-imports/no-unused-imports": ["error"],
+    "react/jsx-indent-props": ["error", "first"],
     "react/jsx-curly-newline": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
