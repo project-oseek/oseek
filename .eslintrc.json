@@ -10,9 +10,9 @@
   "plugins": ["@nx", "react", "react-refresh", "react-hooks", "@typescript-eslint", "unused-imports"],
   "rules": {
     "import/extensions": ["off"],
-
     "import/prefer-default-export": "off",
     "no-plusplus": "off",
+    "react/destructuring-assignment": "off",
     "semi": ["error", "always"],
     "react/jsx-filename-extension": [
       "error",

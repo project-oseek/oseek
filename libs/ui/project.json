@@ -78,6 +78,13 @@
           "buildTarget": "ui:build-storybook:ci"
         }
       }
+    },
+    "generate-icons": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "sh ./generate-icons.sh",
+        "cwd": "./libs/ui"
+      }
     }
   }
 }
