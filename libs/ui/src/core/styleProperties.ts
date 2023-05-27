@@ -1,3 +1,5 @@
+import { range } from '@oseek/lib/utils/array';
+
 export const COLOR_PROPERTIES = {
   primary: '#3673EE',
   secondary: '#EE3636',
@@ -29,3 +31,8 @@ export const SIZE_PROPERTIES = {
   screenMinWidth: '360px',
   screenMaxWidth: '820px',
 };
+
+export const SPACE_PROPERTIES = range(128).reduce((acc: Record<string, string>, curr) => {
+  acc[curr] = `${curr}px`;
+  return acc;
+}, {})
