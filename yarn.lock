@@ -3074,6 +3074,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.58.0
     "@vanilla-extract/css": ^1.11.0
     "@vanilla-extract/next-plugin": ^2.1.3
+    "@vanilla-extract/sprinkles": ^1.6.0
     "@vanilla-extract/vite-plugin": ^3.8.2
     "@vitejs/plugin-react": ^3.0.0
     "@vitest/ui": ^0.31.0
@@ -5142,6 +5143,15 @@ __metadata:
   version: 1.0.3
   resolution: "@vanilla-extract/private@npm:1.0.3"
   checksum: 866a71ba6804edeb0735684e7723ba78f5cf0bb40d4fb538fe6bf7d73928099e341312337b2a510ac0ce96ff8a4b39eb7f7a5fad0c842532353dd20e7278f29b
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/sprinkles@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "@vanilla-extract/sprinkles@npm:1.6.0"
+  peerDependencies:
+    "@vanilla-extract/css": ^1.0.0
+  checksum: ab30ce88f9124f1eacbb5d5fb4f70534cda1ef0fdb992049657b4b480714f340e6b248b12a9c58451d4c7e7cdf55bf2e7a4bfc7c2fc60873ac0da28dc132d32f
   languageName: node
   linkType: hard
 
