@@ -20,6 +20,8 @@
     "baseUrl": ".",
     "paths": {
       "@store/*": ["src/store/*"],
+      "@oseek/lib": ["../../libs/lib/src/index.ts"],
+      "@oseek/ui": ["../../libs/ui/src/index.ts"]
     }
   },
   "include": [
@@ -29,12 +31,8 @@
     "**/*.jsx",
     "../../apps/client/.next/types/**/*.ts",
     "../../dist/apps/client/.next/types/**/*.ts",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "jest.config.ts",
-    "src/**/*.spec.ts",
-    "src/**/*.test.ts"
-  ]
+  "exclude": ["node_modules", "jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]
 }

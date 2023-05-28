@@ -57,6 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:5.59.6"],\
             ["@typescript-eslint/parser", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:5.59.6"],\
             ["@vanilla-extract/css", "npm:1.11.0"],\
+            ["@vanilla-extract/next-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:2.1.3"],\
             ["@vanilla-extract/vite-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:3.8.2"],\
             ["@vitejs/plugin-react", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:3.1.0"],\
             ["@vitest/ui", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:0.31.1"],\
@@ -4997,6 +4998,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:5.59.6"],\
             ["@typescript-eslint/parser", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:5.59.6"],\
             ["@vanilla-extract/css", "npm:1.11.0"],\
+            ["@vanilla-extract/next-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:2.1.3"],\
             ["@vanilla-extract/vite-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:3.8.2"],\
             ["@vitejs/plugin-react", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:3.1.0"],\
             ["@vitest/ui", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:0.31.1"],\
@@ -7811,6 +7813,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@vanilla-extract/next-plugin", [\
+        ["npm:2.1.3", {\
+          "packageLocation": "./.yarn/cache/@vanilla-extract-next-plugin-npm-2.1.3-5a5dc2b7d7-8589961f15.zip/node_modules/@vanilla-extract/next-plugin/",\
+          "packageDependencies": [\
+            ["@vanilla-extract/next-plugin", "npm:2.1.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:2.1.3", {\
+          "packageLocation": "./.yarn/__virtual__/@vanilla-extract-next-plugin-virtual-c60f4bde06/0/cache/@vanilla-extract-next-plugin-npm-2.1.3-5a5dc2b7d7-8589961f15.zip/node_modules/@vanilla-extract/next-plugin/",\
+          "packageDependencies": [\
+            ["@vanilla-extract/next-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:2.1.3"],\
+            ["@types/next", null],\
+            ["@vanilla-extract/webpack-plugin", "virtual:c60f4bde066b8b90930d9a2a28c6ddea80c82848b3ba9d6dfbcf46c30188b24d82e4c0289d0346e69a953eb296dc9477660ce5032b40df6f11b796c55c980a23#npm:2.2.0"],\
+            ["browserslist", "npm:4.21.6"],\
+            ["next", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:13.4.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/next",\
+            "next"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@vanilla-extract/private", [\
         ["npm:1.0.3", {\
           "packageLocation": "./.yarn/cache/@vanilla-extract-private-npm-1.0.3-27ba5cf703-866a71ba68.zip/node_modules/@vanilla-extract/private/",\
@@ -7842,6 +7868,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/vite",\
             "vite"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vanilla-extract/webpack-plugin", [\
+        ["npm:2.2.0", {\
+          "packageLocation": "./.yarn/cache/@vanilla-extract-webpack-plugin-npm-2.2.0-165cad6546-3e1741062e.zip/node_modules/@vanilla-extract/webpack-plugin/",\
+          "packageDependencies": [\
+            ["@vanilla-extract/webpack-plugin", "npm:2.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:c60f4bde066b8b90930d9a2a28c6ddea80c82848b3ba9d6dfbcf46c30188b24d82e4c0289d0346e69a953eb296dc9477660ce5032b40df6f11b796c55c980a23#npm:2.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/@vanilla-extract-webpack-plugin-virtual-8c7203ecb8/0/cache/@vanilla-extract-webpack-plugin-npm-2.2.0-165cad6546-3e1741062e.zip/node_modules/@vanilla-extract/webpack-plugin/",\
+          "packageDependencies": [\
+            ["@vanilla-extract/webpack-plugin", "virtual:c60f4bde066b8b90930d9a2a28c6ddea80c82848b3ba9d6dfbcf46c30188b24d82e4c0289d0346e69a953eb296dc9477660ce5032b40df6f11b796c55c980a23#npm:2.2.0"],\
+            ["@types/webpack", null],\
+            ["@vanilla-extract/integration", "npm:6.2.1"],\
+            ["chalk", "npm:4.1.2"],\
+            ["debug", "virtual:1ca322a4d66c7a41fb1e112226317c5a21fb69ea7d45c9d09b748ed5b9f833c84750b4efbc0ff288a6bf112667942c8baf99cbcdf6d047bbf8cc131896c14fd5#npm:4.3.4"],\
+            ["loader-utils", "npm:2.0.4"],\
+            ["webpack", null]\
+          ],\
+          "packagePeers": [\
+            "@types/webpack",\
+            "webpack"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9236,6 +9288,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["update-browserslist-db", "virtual:e3b9e9d029ed690d72cbb29196ba0a23f15b398eeb926347678187be937db870a04cbf984eecc8e0ec9c290158a9cd8607d12f0188665abe039fa4a9051a22ac#npm:1.0.11"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:4.21.6", {\
+          "packageLocation": "./.yarn/cache/browserslist-npm-4.21.6-caaaf19b9e-d9bfff6e5a.zip/node_modules/browserslist/",\
+          "packageDependencies": [\
+            ["browserslist", "npm:4.21.6"],\
+            ["caniuse-lite", "npm:1.0.30001489"],\
+            ["electron-to-chromium", "npm:1.4.411"],\
+            ["node-releases", "npm:2.0.12"],\
+            ["update-browserslist-db", "virtual:caaaf19b9e866ab6ccdf82b25b6099cd113eeb3a4514abbcc43102cdd73fb8e340dd7409c74831276eff69444a84ee9093f8c1c611e00a2607cce5386b8f4ff7#npm:1.0.11"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["bs-logger", [\
@@ -9437,6 +9500,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001488-69eadb4a60-ef0caf2914.zip/node_modules/caniuse-lite/",\
           "packageDependencies": [\
             ["caniuse-lite", "npm:1.0.30001488"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.0.30001489", {\
+          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001489-94fce279d5-94585a351f.zip/node_modules/caniuse-lite/",\
+          "packageDependencies": [\
+            ["caniuse-lite", "npm:1.0.30001489"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -10725,6 +10795,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.4.399-648c9488b8-51995e6e4d.zip/node_modules/electron-to-chromium/",\
           "packageDependencies": [\
             ["electron-to-chromium", "npm:1.4.399"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.4.411", {\
+          "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.4.411-10c822c952-f71613a0d0.zip/node_modules/electron-to-chromium/",\
+          "packageDependencies": [\
+            ["electron-to-chromium", "npm:1.4.411"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -15717,6 +15794,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-releases", "npm:2.0.10"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:2.0.12", {\
+          "packageLocation": "./.yarn/cache/node-releases-npm-2.0.12-888ed1398a-b8c56db82c.zip/node_modules/node-releases/",\
+          "packageDependencies": [\
+            ["node-releases", "npm:2.0.12"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["node.extend", [\
@@ -19228,6 +19312,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["update-browserslist-db", "npm:1.0.11"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["virtual:caaaf19b9e866ab6ccdf82b25b6099cd113eeb3a4514abbcc43102cdd73fb8e340dd7409c74831276eff69444a84ee9093f8c1c611e00a2607cce5386b8f4ff7#npm:1.0.11", {\
+          "packageLocation": "./.yarn/__virtual__/update-browserslist-db-virtual-ee19308e1c/0/cache/update-browserslist-db-npm-1.0.11-2c8e64258f-b98327518f.zip/node_modules/update-browserslist-db/",\
+          "packageDependencies": [\
+            ["update-browserslist-db", "virtual:caaaf19b9e866ab6ccdf82b25b6099cd113eeb3a4514abbcc43102cdd73fb8e340dd7409c74831276eff69444a84ee9093f8c1c611e00a2607cce5386b8f4ff7#npm:1.0.11"],\
+            ["@types/browserslist", null],\
+            ["browserslist", "npm:4.21.6"],\
+            ["escalade", "npm:3.1.1"],\
+            ["picocolors", "npm:1.0.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/browserslist",\
+            "browserslist"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:e3b9e9d029ed690d72cbb29196ba0a23f15b398eeb926347678187be937db870a04cbf984eecc8e0ec9c290158a9cd8607d12f0188665abe039fa4a9051a22ac#npm:1.0.11", {\
           "packageLocation": "./.yarn/__virtual__/update-browserslist-db-virtual-fb3cb9060c/0/cache/update-browserslist-db-npm-1.0.11-2c8e64258f-b98327518f.zip/node_modules/update-browserslist-db/",\

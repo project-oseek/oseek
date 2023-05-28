@@ -3,6 +3,5 @@
  */
 
 export * from './Button.css';
-export * from './Button.spec';
 export * from './Button.stories';
 export * from './Button';
