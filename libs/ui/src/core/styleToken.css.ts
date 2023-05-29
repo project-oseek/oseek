@@ -1,6 +1,6 @@
 import { createGlobalTheme } from '@vanilla-extract/css';
 
-const COLOR_PROPERTIES = {
+export const COLOR_PROPERTIES = {
   primary: '#3673EE',
   secondary: '#EE3636',
 
@@ -10,7 +10,7 @@ const COLOR_PROPERTIES = {
 
   black: '#131313',
   white: '#FFFFFF',
-};
+} as const;
 
 const FONT_SIZE_PROPERTIES = {
   heading1: '22px',
@@ -26,7 +26,7 @@ const FONT_WEIGHT_PROPERTIES = {
 
 const SIZE_PROPERTIES = {
   statusBarHeight: '24px',
-  headerHeight: '56px',
+  appBarHeight: '56px',
   iconSize: '24px',
   screenMinWidth: '360px',
   screenMaxWidth: '820px',
