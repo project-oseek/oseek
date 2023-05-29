@@ -1,0 +1,1 @@
+npx @svgr/cli --out-dir ./src/icons --ignore-existing --typescript --no-dimensions --svg-props width={24},height={24} --replace-attr-values none="none",#191919={props.color},#131313={props.color} ./src/icons/svgs

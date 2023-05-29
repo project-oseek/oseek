@@ -7,6 +7,9 @@ const meta = {
   title: 'Design System/Button',
   component: Button,
   tags: ['autodocs'],
+  args: {
+    children: 'Button',
+  },
 } as Meta<typeof Button>;
 
 export default meta;
