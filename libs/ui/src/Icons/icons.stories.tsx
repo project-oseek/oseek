@@ -9,6 +9,8 @@ import Refresh from './Refresh';
 import Close from './Close';
 import Delete from './Delete';
 import SnsKakako from './SnsKakako';
+import Notification from "./Notification";
+import Map from "./Map";
 
 const meta = {
   title: 'Design System/Icon',
@@ -48,6 +50,12 @@ export const List: Story = (args) => {
       </Icon>
       <Icon name="SnsKakao">
         <SnsKakako {...args} />
+      </Icon>
+      <Icon name="Notification">
+        <Notification {...args} />
+      </Icon>
+      <Icon name="Map">
+        <Map {...args} />
       </Icon>
     </Wrapper>
   );
