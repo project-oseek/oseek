@@ -58,6 +58,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:5.59.6"],\
             ["@vanilla-extract/css", "npm:1.11.0"],\
             ["@vanilla-extract/next-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:2.1.3"],\
+            ["@vanilla-extract/sprinkles", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:1.6.0"],\
             ["@vanilla-extract/vite-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:3.8.2"],\
             ["@vitejs/plugin-react", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:3.1.0"],\
             ["@vitest/ui", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:0.31.1"],\
@@ -4999,6 +5000,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:5.59.6"],\
             ["@vanilla-extract/css", "npm:1.11.0"],\
             ["@vanilla-extract/next-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:2.1.3"],\
+            ["@vanilla-extract/sprinkles", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:1.6.0"],\
             ["@vanilla-extract/vite-plugin", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:3.8.2"],\
             ["@vitejs/plugin-react", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:3.1.0"],\
             ["@vitest/ui", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:0.31.1"],\
@@ -7842,6 +7844,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@vanilla-extract-private-npm-1.0.3-27ba5cf703-866a71ba68.zip/node_modules/@vanilla-extract/private/",\
           "packageDependencies": [\
             ["@vanilla-extract/private", "npm:1.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vanilla-extract/sprinkles", [\
+        ["npm:1.6.0", {\
+          "packageLocation": "./.yarn/cache/@vanilla-extract-sprinkles-npm-1.6.0-72f143d390-ab30ce88f9.zip/node_modules/@vanilla-extract/sprinkles/",\
+          "packageDependencies": [\
+            ["@vanilla-extract/sprinkles", "npm:1.6.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:1.6.0", {\
+          "packageLocation": "./.yarn/__virtual__/@vanilla-extract-sprinkles-virtual-c82e8b1427/0/cache/@vanilla-extract-sprinkles-npm-1.6.0-72f143d390-ab30ce88f9.zip/node_modules/@vanilla-extract/sprinkles/",\
+          "packageDependencies": [\
+            ["@vanilla-extract/sprinkles", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:1.6.0"],\
+            ["@types/vanilla-extract__css", null],\
+            ["@vanilla-extract/css", "npm:1.11.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/vanilla-extract__css",\
+            "@vanilla-extract/css"\
           ],\
           "linkType": "HARD"\
         }]\
