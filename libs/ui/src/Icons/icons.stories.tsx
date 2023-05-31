@@ -9,6 +9,10 @@ import Refresh from './Refresh';
 import Close from './Close';
 import Delete from './Delete';
 import SnsKakako from './SnsKakako';
+import Bookmark from './Bookmark';
+import Home from './Home';
+import MyPage from './MyPage';
+import Search from './Search';
 
 const meta = {
   title: 'Design System/Icon',
@@ -48,6 +52,18 @@ export const List: Story = (args) => {
       </Icon>
       <Icon name="SnsKakao">
         <SnsKakako {...args} />
+      </Icon>
+      <Icon name="BookMark">
+        <Bookmark {...args} />
+      </Icon>
+      <Icon name="Home">
+        <Home {...args} />
+      </Icon>
+      <Icon name="MyPage">
+        <MyPage {...args} />
+      </Icon>
+      <Icon name="Search">
+        <Search {...args} />
       </Icon>
     </Wrapper>
   );

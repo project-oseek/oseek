@@ -1,6 +1,9 @@
 import { style } from '@vanilla-extract/css';
 
-export const ButtonBasicStyle = style({
+import { styleToken } from '../../core';
+
+const { color } = styleToken;
+export const Basic = style({
   padding: 16,
   borderRadius: 8,
   fontWeight: 700,
@@ -9,8 +12,8 @@ export const ButtonBasicStyle = style({
   border: 'none',
   cursor: 'pointer',
   width: '100%',
-  backgroundColor: '#3673ee',
-  color: '#ffffff',
+  backgroundColor: color.primary,
+  color: color.white,
 
   ':hover': {
     opacity: '0.7',

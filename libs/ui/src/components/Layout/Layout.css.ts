@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import styleToken from "../../core/styleToken.css";
+import { styleToken } from '../../core';
 
 export const LayoutStyle = style({
   width: 'auto',

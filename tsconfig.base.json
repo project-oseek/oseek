@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@oseek/apis": ["libs/apis/src/index.ts"],
-      "@oseek/lib*": ["libs/lib/src*"],
+      "@oseek/lib": ["libs/lib/src/index.ts"],
       "@oseek/ui": ["libs/ui/src/index.ts"]
     }
   },
