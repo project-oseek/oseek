@@ -32,11 +32,9 @@ const SIZE_PROPERTIES = {
   screenMaxWidth: '820px',
 };
 
-const styleToken = createGlobalTheme(':root', {
+export const styleToken = createGlobalTheme(':root', {
   color: COLOR_PROPERTIES,
   fontSize: FONT_SIZE_PROPERTIES,
   fontWeight: FONT_WEIGHT_PROPERTIES,
   size: SIZE_PROPERTIES,
 });
-
-export default styleToken;

@@ -3,6 +3,7 @@
  */
 
 export * from './AppBar/index';
+export * from './BottomNavigation/index';
 export * from './Button/index';
 export * from './IconButton/index';
 export * from './Layout/index';
