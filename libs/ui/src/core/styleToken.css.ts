@@ -29,7 +29,7 @@ const SIZE_PROPERTIES = {
   headerHeight: '56px',
   iconSize: '24px',
   screenMinWidth: '360px',
-  screenMaxWidth: '820px',
+  screenMaxWidth: '768px',
 };
 
 export const styleToken = createGlobalTheme(':root', {
