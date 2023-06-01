@@ -12,6 +12,7 @@ const meta = {
   },
   argTypes: {
     buttonType: {
+      defaultValue: 'Primary',
       options: ['Primary', 'Line', ''],
       control: {
         type: 'radio',

@@ -17,17 +17,17 @@ type Props = {
 
 const { color } = styleToken;
 
-const DATA: { Icon: (args: SVGProps<SVGSVGElement>) => JSX.Element; label: string; path: string }[] = [
-  { Icon: (args) => <Home {...args} />, label: '홈', path: '/' },
-  { Icon: (args) => <Bookmark {...args} />, label: '저장', path: '/fav' },
-  { Icon: (args) => <Search {...args} />, label: '검색', path: '/search' },
-  { Icon: (args) => <MyPage {...args} />, label: '마이', path: '/my-page' },
+const DATA: { Icon: (args: SVGProps<SVGSVGElement>) => JSX.Element; path: string }[] = [
+  { Icon: (args) => <Home {...args} />, path: '/' },
+  { Icon: (args) => <Bookmark {...args} />, path: '/fav' },
+  { Icon: (args) => <Search {...args} />, path: '/search' },
+  { Icon: (args) => <MyPage {...args} />, path: '/my-page' },
 ];
 
 export const BottomNavigation = ({ activePath = '/', onNavigate, className }: Props) => {
   return (
     <nav className={clsx([S.Basic, className])}>
-      {DATA.map(({ Icon, label, path }, idx) => (
+      {DATA.map(({ Icon, path }, idx) => (
         <Button
           key={path + idx}
           className={clsx([S.NavigationButton, path === activePath && S.ActiveNavigationButton])}
@@ -36,7 +36,6 @@ export const BottomNavigation = ({ activePath = '/', onNavigate, className }: Pr
           }}
         >
           <Icon color={path === activePath ? color.primary : color.graySecondary} />
-          {label}
         </Button>
       ))}
     </nav>
