@@ -7,8 +7,11 @@ import clsx from 'clsx';
 import { Button } from '../Button';
 import * as S from './BottomNavigation.css';
 
-import { Bookmark, Home, MyPage, Search } from '../../Icons';
 import { styleToken } from '../../core';
+import Home from '../../Icons/Home';
+import Bookmark from '../../Icons/Bookmark';
+import Search from '../../Icons/Search';
+import MyPage from '../../Icons/MyPage';
 
 type Props = {
   activePath?: string;
@@ -26,7 +29,7 @@ const DATA: { Icon: (args: SVGProps<SVGSVGElement>) => JSX.Element; path: string
 
 export const BottomNavigation = ({ activePath = '/', onNavigate, className }: Props) => {
   return (
-    <nav className={clsx([S.Basic, className])}>
+    <nav className={clsx([S.BottomNavigationStyle, className])}>
       {DATA.map(({ Icon, path }, idx) => (
         <Button
           key={path + idx}

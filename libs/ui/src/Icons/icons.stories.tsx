@@ -3,7 +3,22 @@ import React, { PropsWithChildren } from 'react';
 
 import { Typography } from '../components';
 import { IconStyle, IconWrapperStyle, WrapperStyle } from './icons.css';
-import { ArrowLeft, Check, Refresh, Close, Delete, SnsKakako, Bookmark, Home, MyPage, Search, ArrowDown, Crosshair, Favorite, Like, Map, Noti } from './index';
+import ArrowLeft from './ArrowLeft';
+import Check from './Check';
+import Close from './Close';
+import Delete from './Delete';
+import Refresh from './Refresh';
+import SnsKakako from './SnsKakako';
+import Bookmark from './Bookmark';
+import Home from './Home';
+import MyPage from './MyPage';
+import Search from './Search';
+import ArrowDown from './ArrowDown';
+import Crosshair from './Crosshair';
+import Favorite from './Favorite';
+import Like from './Like';
+import Map from './Map';
+import Noti from './Noti';
 
 const meta = {
   title: 'Design System/Icon',

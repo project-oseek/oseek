@@ -4,7 +4,7 @@ import { styleToken } from '../../core';
 
 const { color } = styleToken;
 
-export const Basic = style({
+export const BottomNavigationStyle = style({
   display: 'flex',
   backgroundColor: color.white,
   boxShadow: '0px -4px 12px rgba(0, 0, 0, 0.05)',

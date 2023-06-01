@@ -10,7 +10,7 @@ type Props = {
 
 export const Button = ({ buttonType = '', children, className, ...props }: PropsWithChildren<Props>) => {
   return (
-    <button className={clsx([S.Basic, S.ButtonTypeStyle[buttonType], className])} {...props}>
+    <button className={clsx([S.ButtonStyle, S.ButtonTypeStyle[buttonType], className])} {...props}>
       {children}
     </button>
   );
