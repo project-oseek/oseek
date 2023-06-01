@@ -8,6 +8,9 @@ const meta = {
   title: 'Design System/Layout',
   component: Layout,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'full-screen',
+  },
 } as Meta<typeof Layout>;
 
 export default meta;
