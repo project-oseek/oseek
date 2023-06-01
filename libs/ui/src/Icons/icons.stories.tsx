@@ -3,18 +3,7 @@ import React, { PropsWithChildren } from 'react';
 
 import { Typography } from '../components';
 import { IconStyle, IconWrapperStyle, WrapperStyle } from './icons.css';
-import ArrowLeft from './ArrowLeft';
-import Check from './Check';
-import Refresh from './Refresh';
-import Close from './Close';
-import Delete from './Delete';
-import SnsKakako from './SnsKakako';
-import Bookmark from './Bookmark';
-import Home from './Home';
-import MyPage from './MyPage';
-import Search from './Search';
-import Notification from "./Notification";
-import Map from "./Map";
+import { ArrowLeft, Check, Refresh, Close, Delete, SnsKakako, Bookmark, Home, MyPage, Search, ArrowDown, Crosshair, Favorite, Like, Map, Noti } from './index';
 
 const meta = {
   title: 'Design System/Icon',
@@ -67,11 +56,23 @@ export const List: Story = (args) => {
       <Icon name="Search">
         <Search {...args} />
       </Icon>
-      <Icon name="Notification">
-        <Notification {...args} />
+      <Icon name="ArrowDown">
+        <ArrowDown {...args} />
+      </Icon>
+      <Icon name="Crosshair">
+        <Crosshair {...args} />
+      </Icon>
+      <Icon name="Favorite">
+        <Favorite {...args} />
+      </Icon>
+      <Icon name="Like">
+        <Like {...args} />
       </Icon>
       <Icon name="Map">
         <Map {...args} />
+      </Icon>
+      <Icon name="Noti">
+        <Noti {...args} />
       </Icon>
     </Wrapper>
   );
