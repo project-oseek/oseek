@@ -9,6 +9,13 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     onNavigate: { action: 'onNavigate' },
+    activePath: {
+      defaultValue: '/',
+      options: ['/', '/fav', '/search', '/my-page'],
+      control: {
+        type: 'radio',
+      },
+    },
   },
 } as Meta<typeof BottomNavigation>;
 

@@ -11,7 +11,7 @@ export const Basic = style({
   fontWeight: 700,
   fontSize: 16,
   lineHeight: '150%',
-  border: 'none',
+  border: '1px solid transparent',
   cursor: 'pointer',
   width: '100%',
 });
