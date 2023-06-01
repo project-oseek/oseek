@@ -1,7 +1,11 @@
 import { style } from '@vanilla-extract/css';
 
+import { styleToken } from '../../core';
+
+const { color, fontSize, fontWeight } = styleToken;
+
 const BASE = style({
-  color: '#131313',
+  color: color.black,
   lineHeight: '150%',
 });
 
@@ -12,9 +16,9 @@ type VariantsType = {
 };
 
 export const VARIANTS: VariantsType = {
-  H1: style([BASE, { fontWeight: 700, fontSize: 22, letterSpacing: '-0.02em' }]),
-  ST1: style([BASE, { fontWeight: 700, fontSize: 16, letterSpacing: '-0.02em' }]),
-  ST2: style([BASE, { fontWeight: 700, fontSize: 14, letterSpacing: '-0.01em' }]),
-  B1: style([BASE, { fontWeight: 400, fontSize: 16, letterSpacing: '-0.02em' }]),
-  B2: style([BASE, { fontWeight: 400, fontSize: 16, letterSpacing: '-0.01em' }]),
+  H1: style([BASE, { fontWeight: fontWeight.bold, fontSize: fontSize.heading1, letterSpacing: '-0.02em' }]),
+  ST1: style([BASE, { fontWeight: fontWeight.bold, fontSize: fontSize.subtitle1, letterSpacing: '-0.02em' }]),
+  ST2: style([BASE, { fontWeight: fontWeight.bold, fontSize: fontSize.subtitle2, letterSpacing: '-0.01em' }]),
+  B1: style([BASE, { fontWeight: fontWeight.regular, fontSize: fontSize.body, letterSpacing: '-0.02em' }]),
+  B2: style([BASE, { fontWeight: fontWeight.regular, fontSize: fontSize.body, letterSpacing: '-0.01em' }]),
 };
