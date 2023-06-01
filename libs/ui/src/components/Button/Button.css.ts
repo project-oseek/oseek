@@ -5,7 +5,7 @@ import { styleToken } from '../../core';
 const { color } = styleToken;
 
 export type ButtonType = 'Primary' | 'Line' | '';
-export const Basic = style({
+export const ButtonStyle = style({
   padding: 16,
   borderRadius: 8,
   fontWeight: 700,
