@@ -21,7 +21,8 @@
     "paths": {
       "@store/*": ["src/store/*"],
       "@oseek/lib": ["../../libs/lib/src/index.ts"],
-      "@oseek/ui": ["../../libs/ui/src/index.ts"]
+      "@oseek/ui": ["../../libs/ui/src/index.ts"],
+      "@oseek/ui/core":  ["../../libs/ui/src/core"],
     }
   },
   "include": [
