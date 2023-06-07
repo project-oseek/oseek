@@ -79,7 +79,9 @@
   },
   "scripts": {
     "generate-barrels": "npx barrelsby --config barrels-config.json",
-    "storybook": "yarn nx run ui:storybook"
+    "storybook": "yarn nx run ui:storybook",
+    "client:serve": "yarn nx run client:serve",
+    "generate-icons": "yarn nx run ui:generate-icons"
   },
   "packageManager": "yarn@3.5.1",
   "dependenciesMeta": {

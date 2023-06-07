@@ -29,14 +29,12 @@ const SIZE_PROPERTIES = {
   appBarHeight: '56px',
   iconSize: '24px',
   screenMinWidth: '360px',
-  screenMaxWidth: '820px',
+  screenMaxWidth: '768px',
 };
 
-const styleToken = createGlobalTheme(':root', {
+export const styleToken = createGlobalTheme(':root', {
   color: COLOR_PROPERTIES,
   fontSize: FONT_SIZE_PROPERTIES,
   fontWeight: FONT_WEIGHT_PROPERTIES,
   size: SIZE_PROPERTIES,
 });
-
-export default styleToken;
