@@ -20,7 +20,7 @@ export const IconStyle = style({
 export const WrapperStyle = style({
   display: 'grid',
   gridTemplateColumns: 'repeat(4, 1fr)',
-  colGap: 30,
+  columnGap: 30,
   rowGap: 10,
   border: '1px solid black',
   backgroundColor: styleToken.color.coolGray,

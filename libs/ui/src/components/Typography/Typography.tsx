@@ -2,7 +2,7 @@ import React, { ElementType, HTMLAttributes, PropsWithChildren } from 'react';
 
 import clsx from 'clsx';
 import { VariantKeyType, VARIANTS } from './Typography.css';
-/* Hello */
+
 type Props = {
   as?: ElementType;
   variant?: VariantKeyType;
