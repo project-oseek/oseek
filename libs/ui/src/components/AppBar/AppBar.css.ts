@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import styleToken from "../../core/styleToken.css";
+import { styleToken } from '../../core/styleToken.css';
 
 export const rootContainer = style({
   boxSizing: 'border-box',
@@ -27,6 +27,9 @@ export const title = style({
   wordBreak: 'break-all',
 });
 
-export const rightContainer = style([actionContainer, {
-  textAlign: 'right',
-}]);
+export const rightContainer = style([
+  actionContainer,
+  {
+    textAlign: 'right',
+  },
+]);
