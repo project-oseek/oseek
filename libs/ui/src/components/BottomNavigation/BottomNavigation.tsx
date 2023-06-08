@@ -38,7 +38,7 @@ export const BottomNavigation = ({ activePath = '/', onNavigate, className }: Pr
             onNavigate?.(path);
           }}
         >
-          <Icon color={path === activePath ? color.primary : color.graySecondary} />
+          <Icon color={path === activePath ? color.primary : color.gray2} />
         </Button>
       ))}
     </nav>

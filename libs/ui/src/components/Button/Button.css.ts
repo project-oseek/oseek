@@ -31,7 +31,7 @@ export const ButtonTypeStyle: { [K in ButtonType]: string } = {
     },
   }),
   Line: style({
-    border: `1px solid ${color.graySecondary}`,
+    border: `1px solid ${color.gray2}`,
     backgroundColor: color.white,
     color: color.black,
 
@@ -41,7 +41,7 @@ export const ButtonTypeStyle: { [K in ButtonType]: string } = {
     },
 
     ':active': {
-      border: `1px solid ${color.grayPrimary}`,
+      border: `1px solid ${color.gray1}`,
     },
   }),
   '': style({}),
