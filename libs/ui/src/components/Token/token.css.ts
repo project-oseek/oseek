@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css';
+import { styleToken } from '../../core';
 
 export const colorContainer = style({
   display: 'flex',
@@ -22,5 +23,5 @@ export const rootContainer = style({
   colGap: 30,
   rowGap: 10,
   border: '1px solid black',
-  backgroundColor: '#f6f6f6',
+  backgroundColor: styleToken.color.coolGray,
 });

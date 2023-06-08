@@ -4,9 +4,11 @@ export const COLOR_PROPERTIES = {
   primary: '#3673EE',
   secondary: '#EE3636',
 
-  grayPrimary: '#858B93',
-  graySecondary: '#D6D8DB',
-  grayLight: '#F6F6F6',
+  gray1: '#858B93',
+  gray2: '#D6D8DB',
+  gray3: '#E6E8EB',
+  darkGray: '#616161',
+  coolGray: '#F6F6F6',
 
   black: '#131313',
   white: '#FFFFFF',

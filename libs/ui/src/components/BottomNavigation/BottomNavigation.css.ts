@@ -16,7 +16,7 @@ export const NavigationButton = style({
   alignItems: 'center',
   justifyContent: 'center',
   backgroundColor: color.white,
-  color: color.grayPrimary,
+  color: color.gray1,
   fontWeight: 700,
   fontSize: 10,
   flex: 1,
