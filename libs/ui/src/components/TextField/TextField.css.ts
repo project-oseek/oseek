@@ -11,12 +11,12 @@ export const rootContainer = style({
   borderRadius: '12px',
 });
 
-export const containOutline = style({
-  border: `1px solid ${styleToken.color.black}`,
-});
-
 export const focusOutline = style({
   border: `1px solid ${styleToken.color.primary}`,
+});
+
+export const containOutline = style({
+  border: `1px solid ${styleToken.color.black}`,
 });
 
 export const disabledOutline = style({

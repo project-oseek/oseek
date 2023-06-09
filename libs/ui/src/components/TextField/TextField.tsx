@@ -1,3 +1,5 @@
+'use client';
+
 import React, { forwardRef, HTMLAttributes, ReactElement, useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 
@@ -15,16 +17,7 @@ type TextFieldProps = {
 
 type Props = TextFieldProps & HTMLAttributes<HTMLInputElement>;
 
-export const TextField = forwardRef<HTMLInputElement, Props>(({
-  id,
-  name,
-  label,
-  focus,
-  value,
-  disabled,
-  action,
-  ...props
-}: Props, ref) => {
+export const TextField = forwardRef<HTMLInputElement, Props>(({ id, name, label, focus, value, disabled, action, ...props }: Props, ref) => {
   const [textFocus, setTextFocus] = useState(Boolean(focus));
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -43,12 +36,7 @@ export const TextField = forwardRef<HTMLInputElement, Props>(({
   }, [textFocus]);
 
   return (
-    <div className={clsx(
-      S.rootContainer,
-      value && S.containOutline,
-      textFocus && S.focusOutline,
-      disabled && S.disabledOutline
-    )}>
+    <div className={clsx(S.rootContainer, textFocus && S.focusOutline, value && S.containOutline, disabled && S.disabledOutline)}>
       <label htmlFor={id} className={clsx(S.label, disabled && S.disabledLabel)}>
         {label}
       </label>
@@ -60,6 +48,7 @@ export const TextField = forwardRef<HTMLInputElement, Props>(({
           className={clsx(S.input, disabled && S.disabledInput)}
           onFocus={handleFocusInInput}
           onBlur={handleFocusOutInput}
+          value={value}
           disabled={disabled}
           ref={ref || inputRef}
           {...props}
