@@ -11,12 +11,16 @@ export const rootContainer = style({
   borderRadius: '12px',
 });
 
-export const containOutlint = style({
+export const containOutline = style({
   border: `1px solid ${styleToken.color.black}`,
 });
 
 export const focusOutline = style({
   border: `1px solid ${styleToken.color.primary}`,
+});
+
+export const disabledOutline = style({
+  border: `1px solid ${styleToken.color.gray3}`,
 });
 
 export const inputContainer = style({
@@ -32,8 +36,12 @@ export const label = style({
   fontSize: '12px',
   lineHeight: 1.5,
   letterSpacing: '-0.01em',
-  color: styleToken.color.gray2,
+  color: styleToken.color.gray1,
   marginBottom: '8px',
+});
+
+export const disabledLabel = style({
+  color: styleToken.color.gray3,
 });
 
 export const input = style({
@@ -52,8 +60,17 @@ export const input = style({
     outline: 'none',
   },
   '::placeholder': {
-    color: styleToken.color.gray2,
+    color: styleToken.color.gray1,
     paddingLeft: '2px',
+  },
+});
+
+export const disabledInput = style({
+  ':disabled': {
+    backgroundColor: styleToken.color.white,
+  },
+  '::placeholder': {
+    color: styleToken.color.gray3,
   },
 });
 

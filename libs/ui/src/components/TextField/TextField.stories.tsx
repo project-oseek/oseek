@@ -47,3 +47,13 @@ Action.args = {
   value: '떡볶이가 제일 좋아',
   action: <IconButton icon={<SvgDelete color={styleToken.color.black} />} size="24px" onClick={() => alert('액션 클릭')} />,
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  id: 'action',
+  label: '닉네임',
+  placeholder: '김오식 (최대 N자)',
+  value: '떡볶이가 제일 좋아',
+  disabled: true,
+  action: <IconButton icon={<SvgDelete color={styleToken.color.black} />} size="24px" onClick={() => alert('액션 클릭')} />,
+};

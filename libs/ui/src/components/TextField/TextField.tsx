@@ -8,8 +8,9 @@ type TextFieldProps = {
   name?: string;
   label?: string;
   focus?: boolean;
-  action?: ReactElement;
   value: string;
+  disabled?: boolean;
+  action?: ReactElement;
 };
 
 type Props = TextFieldProps & HTMLAttributes<HTMLInputElement>;
@@ -19,8 +20,9 @@ export const TextField = forwardRef<HTMLInputElement, Props>(({
   name,
   label,
   focus,
-  action,
   value,
+  disabled,
+  action,
   ...props
 }: Props, ref) => {
   const [textFocus, setTextFocus] = useState(Boolean(focus));
@@ -43,10 +45,11 @@ export const TextField = forwardRef<HTMLInputElement, Props>(({
   return (
     <div className={clsx(
       S.rootContainer,
-      value && S.containOutlint,
-      textFocus && S.focusOutline
+      value && S.containOutline,
+      textFocus && S.focusOutline,
+      disabled && S.disabledOutline
     )}>
-      <label htmlFor={id} className={S.label}>
+      <label htmlFor={id} className={clsx(S.label, disabled && S.disabledLabel)}>
         {label}
       </label>
       <div className={S.inputContainer}>
@@ -54,9 +57,10 @@ export const TextField = forwardRef<HTMLInputElement, Props>(({
           type="text"
           id={id}
           name={name}
-          className={S.input}
+          className={clsx(S.input, disabled && S.disabledInput)}
           onFocus={handleFocusInInput}
           onBlur={handleFocusOutInput}
+          disabled={disabled}
           ref={ref || inputRef}
           {...props}
         />
