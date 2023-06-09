@@ -1,13 +1,13 @@
 import { style } from '@vanilla-extract/css';
-import styleToken from "../../core/styleToken.css";
+import { styleToken } from '../../core/styleToken.css';
 
 export const rootContainer = style({
   position: 'relative',
-  padding: '12px 16px 12px 12px',
+  padding: '12px',
   width: '100%',
   height: 'auto',
   background: styleToken.color.white,
-  border: `1px solid ${styleToken.color.graySecondary}`,
+  border: `1px solid ${styleToken.color.gray2}`,
   borderRadius: '12px',
 });
 
@@ -32,7 +32,7 @@ export const label = style({
   fontSize: '12px',
   lineHeight: 1.5,
   letterSpacing: '-0.01em',
-  color: styleToken.color.grayPrimary,
+  color: styleToken.color.gray2,
   marginBottom: '8px',
 });
 
@@ -49,16 +49,16 @@ export const input = style({
   color: styleToken.color.black,
   caretColor: styleToken.color.primary,
   ':focus': {
-    outline: 'none'
+    outline: 'none',
   },
   '::placeholder': {
-    color: styleToken.color.graySecondary,
-    paddingLeft: '2px'
+    color: styleToken.color.gray2,
+    paddingLeft: '2px',
   },
 });
 
 export const actionContainer = style({
   height: '24px',
-  width: 'auto',
+  width: '24px',
   flex: '1 1 24px',
 });

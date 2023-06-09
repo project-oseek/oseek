@@ -5,7 +5,7 @@ import { TextField } from './TextField';
 import { Layout } from '../Layout';
 import { IconButton } from '../IconButton';
 import SvgDelete from '../../Icons/Delete';
-import styleToken from '../../core/styleToken.css';
+import { styleToken } from '../../core/styleToken.css';
 
 const meta = {
   title: 'Design System/TextField',
@@ -45,5 +45,5 @@ Action.args = {
   label: '닉네임',
   placeholder: '김오식 (최대 N자)',
   value: '떡볶이가 제일 좋아',
-  action: <IconButton icon={<SvgDelete color={styleToken.color.black} />} onClick={() => alert('액션 클릭')} />,
+  action: <IconButton icon={<SvgDelete color={styleToken.color.black} />} size="24px" onClick={() => alert('액션 클릭')} />,
 };
