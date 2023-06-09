@@ -8,5 +8,6 @@ export * from './Button/index';
 export * from './IconButton/index';
 export * from './Layout/index';
 export * from './StatusBar/index';
+export * from './TextField/index';
 export * from './Token/index';
 export * from './Typography/index';
