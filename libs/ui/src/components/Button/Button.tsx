@@ -6,11 +6,12 @@ import * as S from './Button.css';
 
 type Props = {
   buttonType?: ButtonType;
+  disabled?: boolean;
 } & HTMLAttributes<HTMLButtonElement>;
 
-export const Button = ({ buttonType = '', children, className, ...props }: PropsWithChildren<Props>) => {
+export const Button = ({ buttonType = '', children, className, disabled, ...props }: PropsWithChildren<Props>) => {
   return (
-    <button className={clsx([S.ButtonStyle, S.ButtonTypeStyle[buttonType], className])} {...props}>
+    <button className={clsx([S.ButtonStyle, S.ButtonTypeStyle[buttonType], className])} disabled={disabled} {...props}>
       {children}
     </button>
   );
