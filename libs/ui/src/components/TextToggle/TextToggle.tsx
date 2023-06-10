@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import * as S from './TextToggle.css';
 import { Typography } from '../Typography';
 import { styleToken } from '../../core';
-import { Check } from '../../Icons';
+import Check from '../../Icons/Check';
 
 type Props = {
   index: number;
