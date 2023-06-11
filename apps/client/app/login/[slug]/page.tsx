@@ -1,5 +1,5 @@
 import React from 'react';
-import { SettingKeywordPage, SettingLocationPage, SettingMatchPage, SettingNamePage } from '../../../components/login/page';
+import { SettingKeywordPage, SettingLocationPage, SettingMatchPage, SettingNamePage } from '../../../src/components/login/page';
 
 type Props = {
   params: {

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { AppBar, ArrowLeft, Box, IconButton, Refresh, StatusBar, styleToken } from '@oseek/ui';
+import { AppBar, ArrowLeft, IconButton, Refresh, styleToken } from '@oseek/ui';
 
 import * as S from './LoginHeader.css';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, styleToken } from '@oseek/ui';
+import { Button } from '@oseek/ui';
 
 import * as S from './BottomSheet.css';
 
