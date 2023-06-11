@@ -9,7 +9,7 @@ const BASE = style({
   lineHeight: '150%',
 });
 
-export type VariantKeyType = 'H1' | 'ST1' | 'ST2' | 'B1' | 'B2';
+export type VariantKeyType = 'H1' | 'H2' | 'ST1' | 'ST2' | 'B1' | 'B2';
 
 type VariantsType = {
   [K in VariantKeyType]: string;
@@ -17,6 +17,7 @@ type VariantsType = {
 
 export const VARIANTS: VariantsType = {
   H1: style([BASE, { fontWeight: fontWeight.bold, fontSize: fontSize.heading1, letterSpacing: '-0.02em' }]),
+  H2: style([BASE, { fontWeight: fontWeight.bold, fontSize: fontSize.heading2, letterSpacing: '-0.02em' }]),
   ST1: style([BASE, { fontWeight: fontWeight.bold, fontSize: fontSize.subtitle1, letterSpacing: '-0.02em' }]),
   ST2: style([BASE, { fontWeight: fontWeight.bold, fontSize: fontSize.subtitle2, letterSpacing: '-0.01em' }]),
   B1: style([BASE, { fontWeight: fontWeight.regular, fontSize: fontSize.body, letterSpacing: '-0.02em' }]),

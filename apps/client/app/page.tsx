@@ -1,14 +1,17 @@
 import React from 'react';
 
 import * as S from './page.css';
-import { Container, Intro, MainLayout, Preview } from '../src/components';
+import { Container, Intro, MainLayout, Menu, MenuCategory, Preview, Recommend } from '../src/components';
 
-const IndexPage = () => {
+const IndexPage = ({ params }: { params: string }) => {
+  console.log(params);
   return (
-    <MainLayout>
+    <MainLayout activePath="/">
       <Intro />
       <Container padding="24px 16px" className={S.Container}>
         <Preview />
+        <Menu />
+        <Recommend />
       </Container>
     </MainLayout>
   );

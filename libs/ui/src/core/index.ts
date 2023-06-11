@@ -3,3 +3,4 @@
  */
 
 export * from './styleToken.css';
+export * from './commonStyles.css';

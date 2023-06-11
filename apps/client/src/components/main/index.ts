@@ -3,4 +3,6 @@
  */
 
 export * from './intro/index';
+export * from './menu/index';
 export * from './preview/index';
+export * from './recommend/index';

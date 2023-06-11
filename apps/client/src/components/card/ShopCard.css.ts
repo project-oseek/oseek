@@ -17,9 +17,9 @@ export const BigContainer = style({
   borderRadius: 32,
   padding: 8,
   paddingBottom: 24,
-  border: '1px solid blue',
   display: 'flex',
   flexDirection: 'column',
+  backgroundColor: color.white,
 });
 
 export const BigImage = style({

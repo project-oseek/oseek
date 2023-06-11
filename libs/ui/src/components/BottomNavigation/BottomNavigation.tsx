@@ -17,13 +17,13 @@ type Props = {
 const { color } = styleToken;
 
 const DATA: { Icon: (args: SVGProps<SVGSVGElement>) => JSX.Element; path: string }[] = [
-  { Icon: (args) => <Home {...args} />, path: '/main' },
-  { Icon: (args) => <Bookmark {...args} />, path: '/main/like' },
+  { Icon: (args) => <Home {...args} />, path: '/' },
+  { Icon: (args) => <Bookmark {...args} />, path: '/like' },
   { Icon: (args) => <Search {...args} />, path: '/search' },
   { Icon: (args) => <MyPage {...args} />, path: '/my-page' },
 ];
 
-export const BottomNavigation = ({ activePath = '/main', className }: Props) => {
+export const BottomNavigation = ({ activePath = '/', className }: Props) => {
   return (
     <nav className={clsx([S.BottomNavigationStyle, className])}>
       {DATA.map(({ Icon, path }, idx) => (
