@@ -1,6 +1,10 @@
 import { style } from '@vanilla-extract/css';
 
-export const layoutStyle = style({
-  display: 'flex',
-  flexDirection: 'column',
+import { styleToken } from '@oseek/ui/core';
+
+const { color } = styleToken;
+
+export const Container = style({
+  backgroundColor: color.coolGray,
+  flex: 1,
 });

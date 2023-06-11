@@ -16,4 +16,3 @@ export { default as Refresh } from './Refresh';
 export { default as Search } from './Search';
 export { default as SnsKakao } from './SnsKakako';
 export { default as Status } from './Status';
-export * from './icons.css';

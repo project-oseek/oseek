@@ -7,7 +7,7 @@ import { LoginHeader, LoginHeading } from '../index';
 import { BodySection, BottomSheet, ContentSection } from '../../section';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
 
-const SettingKeywordPage = () => {
+export const SettingKeywordPage = () => {
   const router = useRouter();
 
   const [coords, setCoords] = createLoginSettingSlice((state) => [state.coords, state.setCoords]);
@@ -61,5 +61,3 @@ const SettingKeywordPage = () => {
     </>
   );
 };
-
-export default SettingKeywordPage;

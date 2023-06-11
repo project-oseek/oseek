@@ -5,10 +5,11 @@ import { useRouter } from 'next/navigation';
 import { TextToggle } from '@oseek/ui';
 import { range } from '@oseek/lib';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
-import { LoginHeader, LoginHeading } from '../index';
+import { LoginHeading } from '../LoginHeading';
+import { LoginHeader } from '../LoginHeader';
 import { BodySection, ContentSection, BottomSheet } from '../../section';
 
-const SettingKeywordPage = () => {
+export const SettingKeywordPage = () => {
   const router = useRouter();
   const [keywords, setKeywords] = createLoginSettingSlice((state) => [state.keywords, state.setKeywords]);
 
@@ -52,5 +53,3 @@ const SettingKeywordPage = () => {
     </>
   );
 };
-
-export default SettingKeywordPage;

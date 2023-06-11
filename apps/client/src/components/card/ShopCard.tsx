@@ -1,10 +1,13 @@
+'use client';
+
 import Image from 'next/image';
 
-import { Typography } from '@oseek/ui';
+import { Favorite, Typography, COLOR_PROPERTIES } from '@oseek/ui';
 import * as S from './ShopCard.css';
 import { Label } from '../label';
+import { Divider } from '../divider';
 
-const Big = () => {
+export const ShopCardBig = () => {
   return (
     <div className={S.BigContainer}>
       <Image src="" alt="식당 사진" height={220} className={S.BigImage} />
@@ -23,15 +26,15 @@ const Big = () => {
             <Typography as="span" variant="B2" className={S.subColor}>
               영업전
             </Typography>
-            <div className={S.BigDivider} />
+            <Divider />
             <Typography as="span" variant="ST2" className={S.gray1Color}>
               4.8
             </Typography>
-            <div className={S.BigDivider} />
+            <Divider />
             <Typography as="span" variant="ST2" className={S.gray1Color}>
               480m
             </Typography>
-            <div className={S.BigDivider} />
+            <Divider />
             <Typography as="span" variant="B2" className={S.BigAverage}>
               평균
               <Typography as="span" variant="ST2">
@@ -50,4 +53,32 @@ const Big = () => {
   );
 };
 
-export const ShopCard = { Big };
+export const ShopCardSmall = () => {
+  return (
+    <div className={S.SmallContainer}>
+      <Image src="" alt="식당 사진" height={120} className={S.SmallImage} />
+      <main className={S.SmallTitleContainer}>
+        <Typography variant="ST1">꽃길 국수</Typography>
+        <Typography variant="B2" className={S.gray1Color}>
+          한식
+        </Typography>
+      </main>
+      <div className={S.SmallInfoContainer}>
+        <Favorite
+          color={COLOR_PROPERTIES.gray1}
+          className={S.Favorite}
+          onClick={() => {
+            console.log('A');
+          }}
+        />
+        <Typography variant="ST2" className={S.gray1Color}>
+          4.8
+        </Typography>
+        <Divider />
+        <Typography variant="B2" className={S.gray1Color}>
+          480m
+        </Typography>
+      </div>
+    </div>
+  );
+};

@@ -9,5 +9,3 @@ export const ContentSection = ({ children }: PropsWithChildren) => {
     </section>
   );
 };
-
-export default ContentSection;

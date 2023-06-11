@@ -6,7 +6,7 @@ type Props = {
   description?: ReactElement;
 };
 
-const LoginHeading = ({ title, description }: Props) => {
+export const LoginHeading = ({ title, description }: Props) => {
   return (
     <div style={{ padding: '0 24px', margin: '24px 0 0 0' }}>
       <Typography as="h1" variant="H1">
@@ -20,5 +20,3 @@ const LoginHeading = ({ title, description }: Props) => {
     </div>
   );
 };
-
-export default LoginHeading;

@@ -10,7 +10,7 @@ type Props = {
   visibleRefresh?: boolean;
 };
 
-const LoginHeader = ({ visibleRefresh }: Props) => {
+export const LoginHeader = ({ visibleRefresh }: Props) => {
   const router = useRouter();
 
   const handlePrev = () => {
@@ -26,5 +26,3 @@ const LoginHeader = ({ visibleRefresh }: Props) => {
     </header>
   );
 };
-
-export default LoginHeader;

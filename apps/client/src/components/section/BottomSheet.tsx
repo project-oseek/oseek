@@ -8,7 +8,7 @@ type Props = {
   onClick: () => void;
 };
 
-const BottomSheet = ({ disabled, onClick }: Props) => {
+export const BottomSheet = ({ disabled, onClick }: Props) => {
   return (
     <footer className={S.container}>
       <div className={S.gradient} />
@@ -18,5 +18,3 @@ const BottomSheet = ({ disabled, onClick }: Props) => {
     </footer>
   );
 };
-
-export default BottomSheet;

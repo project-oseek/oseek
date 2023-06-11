@@ -4,7 +4,7 @@ import { Button, SnsKakako } from '@oseek/ui';
 
 import * as S from './LoginPage.css';
 
-const LoginPage = () => {
+export const LoginPage = () => {
   return (
     <>
       <Image className={S.logo} src="/images/login-logo.png" width={208} height={84} alt="로고 이미지" />
@@ -18,5 +18,3 @@ const LoginPage = () => {
     </>
   );
 };
-
-export default LoginPage;
