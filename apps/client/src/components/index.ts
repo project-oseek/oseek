@@ -5,3 +5,7 @@
 export * from './card/index';
 export * from './divider/index';
 export * from './label/index';
+export * from './layout/index';
+export * from './login/index';
+export * from './main/index';
+export * from './section/index';

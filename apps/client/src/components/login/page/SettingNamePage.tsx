@@ -4,10 +4,11 @@ import React, { ChangeEvent, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { TextField } from '@oseek/ui';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
-import { LoginHeader, LoginHeading } from '../index';
+import { LoginHeading } from '../LoginHeading';
+import { LoginHeader } from '../LoginHeader';
 import { BodySection, ContentSection, BottomSheet } from '../../section';
 
-const SettingNamePage = () => {
+export const SettingNamePage = () => {
   const router = useRouter();
 
   const [name, setName] = createLoginSettingSlice((state) => [state.name, state.setName]);
@@ -43,5 +44,3 @@ const SettingNamePage = () => {
     </>
   );
 };
-
-export default SettingNamePage;

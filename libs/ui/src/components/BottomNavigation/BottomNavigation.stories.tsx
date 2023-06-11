@@ -8,10 +8,9 @@ const meta = {
   component: BottomNavigation,
   tags: ['autodocs'],
   argTypes: {
-    onNavigate: { action: 'onNavigate' },
     activePath: {
-      defaultValue: '/',
-      options: ['/', '/fav', '/search', '/my-page'],
+      defaultValue: '/main',
+      options: ['/main', '/main/like', '/search', '/my-page'],
       control: {
         type: 'radio',
       },

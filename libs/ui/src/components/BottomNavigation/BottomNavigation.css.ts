@@ -21,6 +21,7 @@ export const NavigationButton = style({
   fontSize: 10,
   flex: 1,
   borderRadius: 0,
+  padding: 16,
 });
 
 export const ActiveNavigationButton = style({
