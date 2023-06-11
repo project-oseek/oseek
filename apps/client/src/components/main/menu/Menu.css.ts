@@ -1,12 +1,8 @@
 import { style } from '@vanilla-extract/css';
 
-import { styleToken } from '@oseek/ui/core';
-
-const { color } = styleToken;
-
 export const Container = style({
-  backgroundColor: color.coolGray,
-  flex: 1,
+  marginTop: 40,
   display: 'flex',
   flexDirection: 'column',
+  gap: 26,
 });

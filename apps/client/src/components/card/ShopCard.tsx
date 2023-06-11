@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import { Favorite, Typography, COLOR_PROPERTIES } from '@oseek/ui';
+import { Favorite, Typography, COLOR_PROPERTIES, Like } from '@oseek/ui';
 import * as S from './ShopCard.css';
 import { Label } from '../label';
 import { Divider } from '../divider';
@@ -20,13 +20,14 @@ export const ShopCardBig = () => {
                 쌈밥
               </Typography>
             </Typography>
-            {/*   Icon */}
+            <Like color={COLOR_PROPERTIES.gray1} />
           </div>
           <div className={S.BigInfoDetailContainer}>
             <Typography as="span" variant="B2" className={S.subColor}>
               영업전
             </Typography>
             <Divider />
+            <Favorite color={COLOR_PROPERTIES.gray1} style={{ marginRight: 6 }} />
             <Typography as="span" variant="ST2" className={S.gray1Color}>
               4.8
             </Typography>

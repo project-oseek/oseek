@@ -10,7 +10,7 @@ const meta = {
   argTypes: {
     activePath: {
       defaultValue: '/main',
-      options: ['/main', '/main/like', '/search', '/my-page'],
+      options: ['/', '/like', '/search', '/my-page'],
       control: {
         type: 'radio',
       },

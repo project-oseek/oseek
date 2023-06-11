@@ -1,7 +1,14 @@
-import React, { PropsWithChildren } from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import clsx from 'clsx';
 
 import * as S from './BodySection.css';
 
-export const BodySection = ({ children }: PropsWithChildren) => {
-  return <section className={S.container}>{children}</section>;
+type Props = HTMLAttributes<HTMLDivElement>;
+
+export const BodySection = ({ className, children, ...props }: PropsWithChildren<Props>) => {
+  return (
+    <section className={clsx([S.container, className])} {...props}>
+      {children}
+    </section>
+  );
 };

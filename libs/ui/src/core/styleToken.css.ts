@@ -16,6 +16,7 @@ export const COLOR_PROPERTIES = {
 
 const FONT_SIZE_PROPERTIES = {
   heading1: '22px',
+  heading2: '20',
   subtitle1: '16px',
   subtitle2: '14px',
   body: '16px',

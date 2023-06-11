@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Button, SnsKakako } from '@oseek/ui';
+import { Button, SnsKakao } from '@oseek/ui';
 
 import * as S from './LoginPage.css';
 
