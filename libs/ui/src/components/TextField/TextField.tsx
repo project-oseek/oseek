@@ -11,13 +11,15 @@ type TextFieldProps = {
   label?: string;
   focus?: boolean;
   value: string;
+  maxLength?: number;
   disabled?: boolean;
+  readOnly?: boolean;
   action?: ReactElement;
 };
 
 type Props = TextFieldProps & HTMLAttributes<HTMLInputElement>;
 
-export const TextField = forwardRef<HTMLInputElement, Props>(({ id, name, label, focus, value, disabled, action, ...props }: Props, ref) => {
+export const TextField = forwardRef<HTMLInputElement, Props>(({ id, name, label, focus, value, maxLength, disabled, readOnly, action, ...props }: Props, ref) => {
   const [textFocus, setTextFocus] = useState(Boolean(focus));
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -36,7 +38,7 @@ export const TextField = forwardRef<HTMLInputElement, Props>(({ id, name, label,
   }, [textFocus]);
 
   return (
-    <div className={clsx(S.rootContainer, textFocus && S.focusOutline, value && S.containOutline, disabled && S.disabledOutline)}>
+    <div className={clsx(S.rootContainer, value && S.containOutline, textFocus && S.focusOutline, disabled && S.disabledOutline)}>
       <label htmlFor={id} className={clsx(S.label, disabled && S.disabledLabel)}>
         {label}
       </label>
@@ -49,7 +51,9 @@ export const TextField = forwardRef<HTMLInputElement, Props>(({ id, name, label,
           onFocus={handleFocusInInput}
           onBlur={handleFocusOutInput}
           value={value}
+          maxLength={maxLength}
           disabled={disabled}
+          readOnly={readOnly}
           ref={ref || inputRef}
           {...props}
         />
