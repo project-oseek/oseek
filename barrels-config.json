@@ -1,7 +1,7 @@
 {
   "delete": true,
-  "directory": ["./libs/lib/src", "./libs/ui/src", "./libs/apis/src", "./apps/client/src/components"],
-  "exclude": [".spec.tsx", ".stories.tsx"],
+  "directory": ["./libs/lib/src", "./libs/ui/src/components", "./libs/ui/src/core", "./libs/apis/src", "./apps/client/src/components"],
+  "exclude": [".spec.tsx", ".stories.tsx", "^(core)/*&/*.css.ts"],
   "location": "all",
   "singleQuotes": true
 }
