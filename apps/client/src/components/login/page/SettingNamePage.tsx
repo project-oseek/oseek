@@ -3,9 +3,9 @@
 import React, { ChangeEvent, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { TextField } from '@oseek/ui';
+import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
 import { LoginHeader, LoginHeading } from '../index';
 import { BodySection, ContentSection, BottomSheet } from '../../section';
-import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
 
 const SettingNamePage = () => {
   const router = useRouter();

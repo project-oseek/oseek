@@ -1,9 +1,8 @@
-import { Button, SnsKakako } from '@oseek/ui';
 import React from 'react';
 import Image from 'next/image';
+import { Button, SnsKakako } from '@oseek/ui';
 
 import * as S from './LoginPage.css';
-import { kakaoIcon } from './LoginPage.css';
 
 const LoginPage = () => {
   return (
