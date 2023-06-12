@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { SVGProps } from 'react';
-const SvgSnsKakako = (props: SVGProps<SVGSVGElement>) => (
+const SvgSnsKakao = (props: SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width={24} height={24} {...props}>
     <path
       fill="#371D1E"
@@ -11,4 +11,4 @@ const SvgSnsKakako = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-export default SvgSnsKakako;
+export default SvgSnsKakao;
