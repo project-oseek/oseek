@@ -2,11 +2,12 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { LoginHeader, LoginHeading } from '../index';
-import { BodySection, BottomSheet, ContentSection } from '../../section';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
+import { BodySection, ContentSection } from '../../section';
+import { LoginHeader } from '../LoginHeader';
+import { LoginHeading } from '../LoginHeading';
 
-export const SettingKeywordPage = () => {
+export const SettingMatchPage = () => {
   const router = useRouter();
   const [name] = createLoginSettingSlice((state) => [state.name]);
 

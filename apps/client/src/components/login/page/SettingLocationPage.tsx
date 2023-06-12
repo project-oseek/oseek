@@ -1,13 +1,14 @@
 'use client';
 
-import React, { ChangeEvent, useState } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
 import { Button, Crosshair, IconButton, Search, styleToken, TextField, Typography } from '@oseek/ui';
-import { LoginHeader, LoginHeading } from '../index';
-import { BodySection, BottomSheet, ContentSection } from '../../section';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
+import { BodySection, BottomSheet, ContentSection } from '../../section';
+import { LoginHeader } from '../LoginHeader';
+import { LoginHeading } from '../LoginHeading';
 
-export const SettingKeywordPage = () => {
+export const SettingLocationPage = () => {
   const router = useRouter();
 
   const [coords, setCoords] = createLoginSettingSlice((state) => [state.coords, state.setCoords]);
