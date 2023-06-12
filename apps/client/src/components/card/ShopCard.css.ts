@@ -96,5 +96,4 @@ export const SmallInfoContainer = style({
 
 export const Favorite = style({
   marginRight: 6,
-  cursor: 'pointer',
 });
