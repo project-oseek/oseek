@@ -8,4 +8,4 @@ cd "./$API_NAME"
 TARGET_PATH=$(pwd)/generated
 
 echo "다음 경로에 interface 생성중... $TARGET_PATH"
-npx @openapitools/openapi-generator-cli generate -i https://petstore.swagger.io/$VERSION/swagger.json -g typescript-axios -o $TARGET_PATH --skip-validate-spec --additional-properties --type-mappings=set=Array -c ../../openapitools.json -t ../mustaches
+npx @openapitools/openapi-generator-cli generate -i http://3.37.83.95:8080/api-docs -g typescript-axios -o $TARGET_PATH --skip-validate-spec --additional-properties --type-mappings=set=Array -c ../../openapitools.json -t ../mustaches

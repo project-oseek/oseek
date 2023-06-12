@@ -12,6 +12,7 @@
     "axios": "^1.4.0",
     "clsx": "^1.2.1",
     "next": "13.4.1",
+    "query-string": "^8.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tslib": "^2.3.0",
@@ -81,7 +82,8 @@
     "generate-barrels": "npx barrelsby --config barrels-config.json",
     "storybook": "yarn nx run ui:storybook",
     "client:serve": "yarn nx run client:serve",
-    "generate-icons": "yarn nx run ui:generate-icons"
+    "generate-icons": "yarn nx run ui:generate-icons",
+    "generate-api:oseek": "yarn nx run apis:generate-api:oseek"
   },
   "packageManager": "yarn@3.5.1",
   "dependenciesMeta": {
