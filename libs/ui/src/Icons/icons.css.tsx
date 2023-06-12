@@ -1,5 +1,8 @@
 import { style } from '@vanilla-extract/css';
+
 import { styleToken } from '../core';
+
+const { color } = styleToken;
 
 export const IconWrapperStyle = style({
   display: 'flex',
@@ -23,5 +26,5 @@ export const WrapperStyle = style({
   columnGap: 30,
   rowGap: 10,
   border: '1px solid black',
-  backgroundColor: styleToken.color.coolGray,
+  backgroundColor: color.coolGray,
 });

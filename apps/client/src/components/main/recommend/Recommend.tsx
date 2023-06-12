@@ -1,8 +1,8 @@
 import React from 'react';
 
-import * as S from './Recommend.css';
 import { Typography } from '@oseek/ui';
 import { RecommendCategory } from './RecommendCategory';
+import * as S from './Recommend.css';
 
 export const Recommend = () => {
   return (

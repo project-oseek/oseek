@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import * as S from './BottomNavigation.css';
 
 import { styleToken } from '../../core';
-import Home from '../../Icons/Home';
+import HomeFill from '../../Icons/HomeFill';
 import Bookmark from '../../Icons/Bookmark';
 import Search from '../../Icons/Search';
 import MyPage from '../../Icons/MyPage';
@@ -17,7 +17,7 @@ type Props = {
 const { color } = styleToken;
 
 const DATA: { Icon: (args: SVGProps<SVGSVGElement>) => JSX.Element; path: string }[] = [
-  { Icon: (args) => <Home {...args} />, path: '/' },
+  { Icon: (args) => <HomeFill {...args} />, path: '/' },
   { Icon: (args) => <Bookmark {...args} />, path: '/like' },
   { Icon: (args) => <Search {...args} />, path: '/search' },
   { Icon: (args) => <MyPage {...args} />, path: '/my-page' },

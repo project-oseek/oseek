@@ -27,7 +27,7 @@ export const ShopCardBig = () => {
               영업전
             </Typography>
             <Divider />
-            <Favorite color={COLOR_PROPERTIES.gray1} style={{ marginRight: 6 }} />
+            <Favorite color={COLOR_PROPERTIES.primary} style={{ marginRight: 6 }} />
             <Typography as="span" variant="ST2" className={S.gray1Color}>
               4.8
             </Typography>
@@ -65,13 +65,7 @@ export const ShopCardSmall = () => {
         </Typography>
       </main>
       <div className={S.SmallInfoContainer}>
-        <Favorite
-          color={COLOR_PROPERTIES.gray1}
-          className={S.Favorite}
-          onClick={() => {
-            console.log('A');
-          }}
-        />
+        <Favorite color={COLOR_PROPERTIES.primary} className={S.Favorite} />
         <Typography variant="ST2" className={S.gray1Color}>
           4.8
         </Typography>

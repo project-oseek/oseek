@@ -1,24 +1,34 @@
 import { Meta, StoryObj } from '@storybook/react';
 import React, { PropsWithChildren } from 'react';
 
-import { Typography } from '../components';
-import { IconStyle, IconWrapperStyle, WrapperStyle } from './icons.css';
-import ArrowLeft from './ArrowLeft';
-import Check from './Check';
-import Close from './Close';
-import Delete from './Delete';
-import Refresh from './Refresh';
+import { Typography } from '../components/Typography/Typography';
+import {
+  ArrowLeft,
+  Bookmark,
+  Check,
+  Close,
+  Crosshair,
+  Delete,
+  Favorite,
+  Home,
+  HomeFill,
+  Like,
+  Map,
+  MyPage,
+  Refresh,
+  Search,
+  ArrowRight,
+  ChevronDown,
+  ChevronRight,
+  ChevronUp,
+  Edit,
+  LikeFill,
+  Notification,
+  Photo,
+  Status,
+} from './index';
 import SnsKakako from './SnsKakako';
-import Bookmark from './Bookmark';
-import Home from './Home';
-import MyPage from './MyPage';
-import Search from './Search';
-import ArrowDown from './ArrowDown';
-import Crosshair from './Crosshair';
-import Favorite from './Favorite';
-import Like from './Like';
-import Map from './Map';
-import Noti from './Noti';
+import * as S from './icons.css';
 
 const meta = {
   title: 'Design System/Icon',
@@ -44,11 +54,26 @@ export const List: Story = (args) => {
       <Icon name="ArrowLeft">
         <ArrowLeft {...args} />
       </Icon>
+      <Icon name="ArrowRight">
+        <ArrowRight {...args} />
+      </Icon>
+      <Icon name="ChevronDown">
+        <ChevronDown {...args} />
+      </Icon>
+      <Icon name="ChevronUp">
+        <ChevronUp {...args} />
+      </Icon>
+      <Icon name="ChevronRight">
+        <ChevronRight {...args} />
+      </Icon>
       <Icon name="Check">
         <Check {...args} />
       </Icon>
       <Icon name="Close">
         <Close {...args} />
+      </Icon>
+      <Icon name="Edit">
+        <Edit {...args} />
       </Icon>
       <Icon name="Delete">
         <Delete {...args} />
@@ -65,14 +90,14 @@ export const List: Story = (args) => {
       <Icon name="Home">
         <Home {...args} />
       </Icon>
+      <Icon name="HomeFill">
+        <HomeFill {...args} />
+      </Icon>
       <Icon name="MyPage">
         <MyPage {...args} />
       </Icon>
       <Icon name="Search">
         <Search {...args} />
-      </Icon>
-      <Icon name="ArrowDown">
-        <ArrowDown {...args} />
       </Icon>
       <Icon name="Crosshair">
         <Crosshair {...args} />
@@ -83,11 +108,20 @@ export const List: Story = (args) => {
       <Icon name="Like">
         <Like {...args} />
       </Icon>
+      <Icon name="LikeFill">
+        <LikeFill {...args} />
+      </Icon>
       <Icon name="Map">
         <Map {...args} />
       </Icon>
-      <Icon name="Noti">
-        <Noti {...args} />
+      <Icon name="Notification">
+        <Notification {...args} />
+      </Icon>
+      <Icon name="Photo">
+        <Photo {...args} />
+      </Icon>
+      <Icon name="Status">
+        <Status {...args} />
       </Icon>
     </Wrapper>
   );
@@ -95,13 +129,13 @@ export const List: Story = (args) => {
 
 const Icon = ({ name, children }: PropsWithChildren<{ name: string }>) => {
   return (
-    <div className={IconWrapperStyle}>
-      <div className={IconStyle}>{children}</div>
+    <div className={S.IconWrapperStyle}>
+      <div className={S.IconStyle}>{children}</div>
       <Typography variant="ST1">{name}</Typography>
     </div>
   );
 };
 
 const Wrapper = ({ children }: PropsWithChildren) => {
-  return <div className={WrapperStyle}>{children}</div>;
+  return <div className={S.WrapperStyle}>{children}</div>;
 };
