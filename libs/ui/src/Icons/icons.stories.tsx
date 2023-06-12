@@ -26,8 +26,8 @@ import {
   Notification,
   Photo,
   Status,
+  SnsKakao,
 } from './index';
-import SnsKakako from './SnsKakako';
 import * as S from './icons.css';
 
 const meta = {
@@ -82,7 +82,7 @@ export const List: Story = (args) => {
         <Refresh {...args} />
       </Icon>
       <Icon name="SnsKakao">
-        <SnsKakako {...args} />
+        <SnsKakao {...args} />
       </Icon>
       <Icon name="BookMark">
         <Bookmark {...args} />

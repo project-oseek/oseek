@@ -19,6 +19,6 @@ export { default as Notification } from './Notification';
 export { default as Photo } from './Photo';
 export { default as Refresh } from './Refresh';
 export { default as Search } from './Search';
-export { default as SnsKakako } from './SnsKakako';
+export { default as SnsKakao } from './SnsKakao';
 export { default as Status } from './Status';
 export { default as Bookmark } from './Bookmark';
