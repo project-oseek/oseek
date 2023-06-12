@@ -1,10 +1,9 @@
 import React from 'react';
 
 import * as S from './page.css';
-import { Container, Intro, MainLayout, Menu, MenuCategory, Preview, Recommend } from '../src/components';
+import { Container, Intro, MainLayout, Menu, Preview, Recommend } from '../src/components';
 
-const IndexPage = ({ params }: { params: string }) => {
-  console.log(params);
+const IndexPage = async () => {
   return (
     <MainLayout activePath="/">
       <Intro />

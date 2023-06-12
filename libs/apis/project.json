@@ -43,10 +43,10 @@
         "cwd": "./libs/apis"
       }
     },
-    "generate-api:petstore": {
+    "generate-api:oseek": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "sh ./generate-api.sh petstore v2",
+        "command": "sh ./generate-api.sh oseek v1",
         "cwd": "./libs/apis"
       }
     }
