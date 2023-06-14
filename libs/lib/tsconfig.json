@@ -7,7 +7,14 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@oseek/ui": ["../../libs/ui/src/index.ts"],
+      "@oseek/ui/core": ["../../libs/ui/src/core"],
+      "@oseek/apis": ["../../libs/apis/src"],
+      "@oseek/lib/utils": ["../../libs/lib/src/utils"]
+    }
   },
   "files": [],
   "include": [],
