@@ -1,15 +1,21 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, ReactElement } from 'react';
 
-import { AppBar, BottomNavigation, Map } from '@oseek/ui';
+import { AppBar, ArrowLeft, BottomNavigation, IconButton, Search } from '@oseek/ui';
 import { BodySection } from '../section';
 import * as S from './MainLayout.css';
 
-type Props = { activePath?: string };
+type Props = { activePath?: string; title?: ReactElement; leftAction?: ReactElement; rightAction?: ReactElement };
 
-export const MainLayout = ({ children, activePath = '/' }: PropsWithChildren<Props>) => {
+export const MainLayout = ({
+  children,
+  activePath = '/',
+  title = 'HEADER',
+  leftAction = <IconButton icon={<ArrowLeft color="#000" />} />,
+  rightAction = <IconButton icon={<Search color="#000" style={{ marginLeft: 'auto' }} />} />,
+}: PropsWithChildren<Props>) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-      <AppBar leftAction={<Map color="#000" />} title="MAIN HEADER" rightAction="RIGHT" />
+      <AppBar leftAction={leftAction} title={title} rightAction={rightAction} />
       <BodySection className={S.MainContainer}>{children}</BodySection>
       <BottomNavigation activePath={activePath} />
     </div>
