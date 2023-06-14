@@ -35,9 +35,17 @@ const SIZE_PROPERTIES = {
   screenMaxWidth: '768px',
 };
 
+const Z_INDEX_PROPERTIES = {
+  modal: '1000',
+  popover: '1100',
+  toast: '1200',
+  tooltip: '1300',
+};
+
 export const styleToken = createGlobalTheme(':root', {
   color: COLOR_PROPERTIES,
   fontSize: FONT_SIZE_PROPERTIES,
   fontWeight: FONT_WEIGHT_PROPERTIES,
   size: SIZE_PROPERTIES,
+  zIndex: Z_INDEX_PROPERTIES,
 });

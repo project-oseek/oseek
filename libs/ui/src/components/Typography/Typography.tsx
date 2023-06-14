@@ -2,6 +2,7 @@ import React, { ElementType, HTMLAttributes, PropsWithChildren } from 'react';
 import clsx from 'clsx';
 
 import * as S from './Typography.css';
+import { VariantKeyType } from './Typography.css';
 
 type Props = {
   as?: ElementType;
