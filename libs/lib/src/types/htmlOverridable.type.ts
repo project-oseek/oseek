@@ -1,5 +1,5 @@
 import { ComponentPropsWithRef, ElementType } from 'react';
-import { Combine } from '@oseek/lib/types/utils.type';
+import { Combine } from './utils.type';
 
 type CombineElementProps<T extends ElementType, K = unknown> = Combine<K, ComponentPropsWithRef<T>>;
 
@@ -17,11 +17,11 @@ type CombineElementProps<T extends ElementType, K = unknown> = Combine<K, Compon
  *     return (
  *       <Component {...props}>
  *         {children}
-*        </Component>
+ *        </Component>
  *     )
  *   }
  * ```
  */
-export type HTMLOverridableProps<T extends ElementType, K = unknown> = CombineElementProps<T,  K> & {
+export type HTMLOverridableProps<T extends ElementType, K = unknown> = CombineElementProps<T, K> & {
   as?: T;
 };

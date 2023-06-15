@@ -5,7 +5,7 @@ import * as S from './Typography.css';
 
 type Props = {
   as?: ElementType;
-  variant?: VariantKeyType;
+  variant?: S.VariantKeyType;
 } & HTMLAttributes<HTMLElement>;
 
 export const Typography = ({ as: Tag = 'span', children, variant = 'H1', className, ...props }: PropsWithChildren<Props>) => {

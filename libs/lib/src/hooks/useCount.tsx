@@ -1,7 +1,6 @@
-// Test Hook
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-export const useCount = (initialValue: number = 0) => {
+export const useCount = (initialValue = 0) => {
   const [count, setCount] = useState(initialValue);
 
   return [count, setCount];
