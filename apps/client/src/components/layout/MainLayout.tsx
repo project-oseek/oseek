@@ -4,7 +4,7 @@ import { AppBar, ArrowLeft, BottomNavigation, IconButton, Search } from '@oseek/
 import { BodySection } from '../section';
 import * as S from './MainLayout.css';
 
-type Props = { activePath?: string; title?: ReactElement; leftAction?: ReactElement; rightAction?: ReactElement };
+type Props = { activePath?: string; title?: string; leftAction?: ReactElement; rightAction?: ReactElement };
 
 export const MainLayout = ({
   children,
