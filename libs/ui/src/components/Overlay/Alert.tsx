@@ -11,7 +11,7 @@ type AlertProps = {
   onSubmit?: (submitResult: unknown) => void;
   type?: AlertType;
   title: string;
-  description: string;
+  description?: string;
   submitText?: string;
   closeText?: string;
 };
@@ -46,9 +46,11 @@ export const Alert = ({ onClose, onSubmit, type = 'alert', title, description, s
     <AlertContainer>
       <AlertBody>
         <Typography variant="ST1">{title}</Typography>
-        <Typography variant="B2" className={S.bodyTextGap}>
-          {description}
-        </Typography>
+        {description && (
+          <Typography variant="B2" className={S.bodyTextGap}>
+            {description}
+          </Typography>
+        )}
       </AlertBody>
       <AlertFooter onSubmit={handleAlertSubmit} {...(type === 'confirm' && { onClose: handleAlertClose })} submitText={submitText} closeText={closeText} />
     </AlertContainer>
