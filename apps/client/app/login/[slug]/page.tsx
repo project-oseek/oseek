@@ -9,7 +9,7 @@ type Props = {
 
 const SettingPages = {
   'setting-name': SettingNamePage,
-  'setting-keyword': SettingKeywordPage,
+  // 'setting-keyword': SettingKeywordPage,
   'setting-location': SettingLocationPage,
   'setting-match': SettingMatchPage,
 };
