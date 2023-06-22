@@ -13,6 +13,24 @@
  */
 
 
-export * from "./api";
-export * from "./configuration";
-export * from "./models";
+
+/**
+ * 
+ * @export
+ * @interface AuthReqDto
+ */
+export interface AuthReqDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthReqDto
+     */
+    'refreshToken'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthReqDto
+     */
+    'accessToken'?: string;
+}
+

@@ -13,6 +13,24 @@
  */
 
 
-export * from "./api";
-export * from "./configuration";
-export * from "./models";
+
+/**
+ * 맴버 정보 수정 요청 DTO
+ * @export
+ * @interface MemberModifyReqDto
+ */
+export interface MemberModifyReqDto {
+    /**
+     * 닉네임
+     * @type {string}
+     * @memberof MemberModifyReqDto
+     */
+    'nickname'?: string | null;
+    /**
+     * 위치
+     * @type {string}
+     * @memberof MemberModifyReqDto
+     */
+    'location'?: string | null;
+}
+

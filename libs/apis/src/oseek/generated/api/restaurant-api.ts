@@ -22,21 +22,26 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
 // @ts-ignore
-import { NoticeResDto } from '../models';
+import { RestaurantResDto } from '../models';
+// @ts-ignore
+import { RestaurantSearchReqDto } from '../models';
 /**
- * NoticeApi - axios parameter creator
+ * RestaurantApi - axios parameter creator
  * @export
  */
-export const NoticeApiAxiosParamCreator = function (configuration?: Configuration) {
+export const RestaurantApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * 공지사항 list를 반환합니다.
-         * @summary 공지사항 조회
+         * 가게 list를 반환합니다.
+         * @summary 가게 조회
+         * @param {RestaurantSearchReqDto} searchReqDto 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        findNotices: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/notice`;
+        findRestaurant: async (searchReqDto: RestaurantSearchReqDto, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'searchReqDto' is not null or undefined
+            assertParamExists('findRestaurant', 'searchReqDto', searchReqDto)
+            const localVarPath = `/restaurant`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -51,6 +56,10 @@ export const NoticeApiAxiosParamCreator = function (configuration?: Configuratio
             // authentication JWT required
             // http bearer authentication required
             await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+            if (searchReqDto !== undefined) {
+                localVarQueryParameter['searchReqDto'] = searchReqDto;
+            }
 
 
     
@@ -67,59 +76,62 @@ export const NoticeApiAxiosParamCreator = function (configuration?: Configuratio
 };
 
 /**
- * NoticeApi - functional programming interface
+ * RestaurantApi - functional programming interface
  * @export
  */
-export const NoticeApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = NoticeApiAxiosParamCreator(configuration)
+export const RestaurantApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = RestaurantApiAxiosParamCreator(configuration)
     return {
         /**
-         * 공지사항 list를 반환합니다.
-         * @summary 공지사항 조회
+         * 가게 list를 반환합니다.
+         * @summary 가게 조회
+         * @param {RestaurantSearchReqDto} searchReqDto 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async findNotices(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<NoticeResDto>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.findNotices(options);
+        async findRestaurant(searchReqDto: RestaurantSearchReqDto, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<RestaurantResDto>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.findRestaurant(searchReqDto, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
 };
 
 /**
- * NoticeApi - factory interface
+ * RestaurantApi - factory interface
  * @export
  */
-export const NoticeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = NoticeApiFp(configuration)
+export const RestaurantApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = RestaurantApiFp(configuration)
     return {
         /**
-         * 공지사항 list를 반환합니다.
-         * @summary 공지사항 조회
+         * 가게 list를 반환합니다.
+         * @summary 가게 조회
+         * @param {RestaurantSearchReqDto} searchReqDto 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        findNotices(options?: any): AxiosPromise<Array<NoticeResDto>> {
-            return localVarFp.findNotices(options).then((request) => request(axios, basePath));
+        findRestaurant(searchReqDto: RestaurantSearchReqDto, options?: any): AxiosPromise<Array<RestaurantResDto>> {
+            return localVarFp.findRestaurant(searchReqDto, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * NoticeApi - object-oriented interface
+ * RestaurantApi - object-oriented interface
  * @export
- * @class NoticeApi
+ * @class RestaurantApi
  * @extends {BaseAPI}
  */
-export class NoticeApi extends BaseAPI {
+export class RestaurantApi extends BaseAPI {
     /**
-     * 공지사항 list를 반환합니다.
-     * @summary 공지사항 조회
+     * 가게 list를 반환합니다.
+     * @summary 가게 조회
+     * @param {RestaurantSearchReqDto} searchReqDto 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof NoticeApi
+     * @memberof RestaurantApi
      */
-    public findNoticesAxios(options?: AxiosRequestConfig) {
-        return NoticeApiFp(this.configuration).findNotices(options).then((request) => request(this.axios, this.basePath));
+    public findRestaurantAxios(searchReqDto: RestaurantSearchReqDto, options?: AxiosRequestConfig) {
+        return RestaurantApiFp(this.configuration).findRestaurant(searchReqDto, options).then((request) => request(this.axios, this.basePath));
     }
 }

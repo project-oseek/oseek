@@ -22,21 +22,29 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
 // @ts-ignore
-import { NoticeResDto } from '../models';
+import { LocationResDto } from '../models';
 /**
- * NoticeApi - axios parameter creator
+ * LocationApi - axios parameter creator
  * @export
  */
-export const NoticeApiAxiosParamCreator = function (configuration?: Configuration) {
+export const LocationApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * 공지사항 list를 반환합니다.
-         * @summary 공지사항 조회
+         * 
+         * @summary 사용자 위치 정보 조회
+         * @param {number} latitude 
+         * @param {number} longitude 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        findNotices: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/notice`;
+        findMemberLocationDetail: async (latitude: number, longitude: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'latitude' is not null or undefined
+            assertParamExists('findMemberLocationDetail', 'latitude', latitude)
+            // verify required parameter 'longitude' is not null or undefined
+            assertParamExists('findMemberLocationDetail', 'longitude', longitude)
+            const localVarPath = `/location/{longitude}/{latitude}`
+                .replace(`{${"latitude"}}`, encodeURIComponent(String(latitude)))
+                .replace(`{${"longitude"}}`, encodeURIComponent(String(longitude)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -67,59 +75,65 @@ export const NoticeApiAxiosParamCreator = function (configuration?: Configuratio
 };
 
 /**
- * NoticeApi - functional programming interface
+ * LocationApi - functional programming interface
  * @export
  */
-export const NoticeApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = NoticeApiAxiosParamCreator(configuration)
+export const LocationApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = LocationApiAxiosParamCreator(configuration)
     return {
         /**
-         * 공지사항 list를 반환합니다.
-         * @summary 공지사항 조회
+         * 
+         * @summary 사용자 위치 정보 조회
+         * @param {number} latitude 
+         * @param {number} longitude 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async findNotices(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<NoticeResDto>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.findNotices(options);
+        async findMemberLocationDetail(latitude: number, longitude: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LocationResDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.findMemberLocationDetail(latitude, longitude, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
 };
 
 /**
- * NoticeApi - factory interface
+ * LocationApi - factory interface
  * @export
  */
-export const NoticeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = NoticeApiFp(configuration)
+export const LocationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = LocationApiFp(configuration)
     return {
         /**
-         * 공지사항 list를 반환합니다.
-         * @summary 공지사항 조회
+         * 
+         * @summary 사용자 위치 정보 조회
+         * @param {number} latitude 
+         * @param {number} longitude 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        findNotices(options?: any): AxiosPromise<Array<NoticeResDto>> {
-            return localVarFp.findNotices(options).then((request) => request(axios, basePath));
+        findMemberLocationDetail(latitude: number, longitude: number, options?: any): AxiosPromise<LocationResDto> {
+            return localVarFp.findMemberLocationDetail(latitude, longitude, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * NoticeApi - object-oriented interface
+ * LocationApi - object-oriented interface
  * @export
- * @class NoticeApi
+ * @class LocationApi
  * @extends {BaseAPI}
  */
-export class NoticeApi extends BaseAPI {
+export class LocationApi extends BaseAPI {
     /**
-     * 공지사항 list를 반환합니다.
-     * @summary 공지사항 조회
+     * 
+     * @summary 사용자 위치 정보 조회
+     * @param {number} latitude 
+     * @param {number} longitude 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof NoticeApi
+     * @memberof LocationApi
      */
-    public findNoticesAxios(options?: AxiosRequestConfig) {
-        return NoticeApiFp(this.configuration).findNotices(options).then((request) => request(this.axios, this.basePath));
+    public findMemberLocationDetailAxios(latitude: number, longitude: number, options?: AxiosRequestConfig) {
+        return LocationApiFp(this.configuration).findMemberLocationDetail(latitude, longitude, options).then((request) => request(this.axios, this.basePath));
     }
 }

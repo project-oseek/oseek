@@ -15,34 +15,40 @@
 
 
 /**
- * 공지사항 리스트 응답Dto
+ * 
  * @export
- * @interface NoticeResDto
+ * @interface TokenInfo
  */
-export interface NoticeResDto {
+export interface TokenInfo {
     /**
-     * 공지사항id
+     * 
+     * @type {string}
+     * @memberof TokenInfo
+     */
+    'grantType'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TokenInfo
+     */
+    'accessToken'?: string;
+    /**
+     * 
      * @type {number}
-     * @memberof NoticeResDto
+     * @memberof TokenInfo
      */
-    'noticeId'?: number;
+    'accessTokenExpirationTime'?: number;
     /**
-     * 공지사항 제목
+     * 
      * @type {string}
-     * @memberof NoticeResDto
+     * @memberof TokenInfo
      */
-    'title'?: string;
+    'refreshToken'?: string;
     /**
-     * 공지사항 내용
-     * @type {string}
-     * @memberof NoticeResDto
+     * 
+     * @type {number}
+     * @memberof TokenInfo
      */
-    'content'?: string;
-    /**
-     * 공지사항 작성 날짜 ex)23/06/11
-     * @type {string}
-     * @memberof NoticeResDto
-     */
-    'registerDate'?: string;
+    'refreshTokenExpirationTime'?: number;
 }
 

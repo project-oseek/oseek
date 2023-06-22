@@ -15,34 +15,34 @@
 
 
 /**
- * 공지사항 리스트 응답Dto
+ * 
  * @export
- * @interface NoticeResDto
+ * @interface MemberInfoResDto
  */
-export interface NoticeResDto {
+export interface MemberInfoResDto {
     /**
-     * 공지사항id
+     * 
      * @type {number}
-     * @memberof NoticeResDto
+     * @memberof MemberInfoResDto
      */
-    'noticeId'?: number;
+    'memberId'?: number;
     /**
-     * 공지사항 제목
+     * 
      * @type {string}
-     * @memberof NoticeResDto
+     * @memberof MemberInfoResDto
      */
-    'title'?: string;
+    'nickname'?: string;
     /**
-     * 공지사항 내용
+     * 
      * @type {string}
-     * @memberof NoticeResDto
+     * @memberof MemberInfoResDto
      */
-    'content'?: string;
+    'email'?: string;
     /**
-     * 공지사항 작성 날짜 ex)23/06/11
+     * 
      * @type {string}
-     * @memberof NoticeResDto
+     * @memberof MemberInfoResDto
      */
-    'registerDate'?: string;
+    'location'?: string;
 }
 

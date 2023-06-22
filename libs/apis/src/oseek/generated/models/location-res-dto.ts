@@ -15,34 +15,40 @@
 
 
 /**
- * 공지사항 리스트 응답Dto
+ * 사용자 위치 정보 요청 DTO
  * @export
- * @interface NoticeResDto
+ * @interface LocationResDto
  */
-export interface NoticeResDto {
+export interface LocationResDto {
     /**
-     * 공지사항id
+     * 경도
      * @type {number}
-     * @memberof NoticeResDto
+     * @memberof LocationResDto
      */
-    'noticeId'?: number;
+    'longitude'?: number;
     /**
-     * 공지사항 제목
-     * @type {string}
-     * @memberof NoticeResDto
+     * 위도
+     * @type {number}
+     * @memberof LocationResDto
      */
-    'title'?: string;
+    'latitude'?: number;
     /**
-     * 공지사항 내용
+     * 시
      * @type {string}
-     * @memberof NoticeResDto
+     * @memberof LocationResDto
      */
-    'content'?: string;
+    'region1depthName'?: string;
     /**
-     * 공지사항 작성 날짜 ex)23/06/11
+     * 구
      * @type {string}
-     * @memberof NoticeResDto
+     * @memberof LocationResDto
      */
-    'registerDate'?: string;
+    'region2depthName'?: string;
+    /**
+     * 동
+     * @type {string}
+     * @memberof LocationResDto
+     */
+    'region3depthName'?: string;
 }
 
