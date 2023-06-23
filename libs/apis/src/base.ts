@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, InternalAxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 import qs from 'query-string';
-import { getLocalStorageItem, setLocalStorageItem } from '@oseek/lib/utils';
-import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY } from '@oseek/lib';
+import { getAccessTokenByLocalStorage, getRefreshTokenByLocalStorage, setLocalStorageItem } from '@oseek/lib/utils';
+import { ACCESS_TOKEN_KEY } from '@oseek/lib';
 import { AXIOS_TIMEOUT, OSEEK_API_URL } from './constants';
 import { AuthApi } from './oseek/generated';
 
@@ -14,7 +14,7 @@ const baseAxios = axios.create({
 });
 
 const handleHeadersWithAccessToken = (config: AxiosRequestConfig): InternalAxiosRequestConfig<any> => {
-  const accessToken = getLocalStorageItem(ACCESS_TOKEN_KEY) || '';
+  const accessToken = getAccessTokenByLocalStorage() || '';
   config.headers = {
     ...config.headers,
     Authorization: `Bearer ${accessToken}`,
@@ -29,7 +29,7 @@ const handleErrorResponses = async (error: AxiosError) => {
 
   if (status === 401 && !previousRequest._retried) {
     previousRequest._retried = true;
-    const refreshToken = getLocalStorageItem<string>(REFRESH_TOKEN_KEY);
+    const refreshToken = getRefreshTokenByLocalStorage();
 
     if (refreshToken) {
       try {
@@ -53,6 +53,6 @@ const handleErrorResponses = async (error: AxiosError) => {
 
 baseAxios.interceptors.request.use(handleHeadersWithAccessToken, Promise.reject);
 
-baseAxios.interceptors.response.use((response) => response.data.data, handleErrorResponses);
+baseAxios.interceptors.response.use((response) => response.data, handleErrorResponses);
 
 export default baseAxios;

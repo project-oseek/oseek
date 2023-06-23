@@ -44,5 +44,11 @@ export interface MemberInfoResDto {
      * @memberof MemberInfoResDto
      */
     'location'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MemberInfoResDto
+     */
+    'isFirstLogin'?: string;
 }
 
