@@ -1,40 +1,26 @@
 import { create, StateCreator } from 'zustand';
-import { range } from '@oseek/lib';
-
-// 더미데이터
-const keywordDummy = range(20).map((_) => ({
-  emoji: '🙇‍',
-  text: '안녕하세요',
-  checked: false,
-}));
-
-type Coords = {
-  latitude: number;
-  longitude: number;
-  location: string;
-};
 
 type State = {
   name: string;
-  keywords: any[];
-  coords: Coords | null;
+  selectedKeywordCodes: string[];
+  location: string;
 };
 
 type Action = {
   setName: (name: string) => void;
-  setKeywords: (keyword: any[]) => void;
-  setCoords: (coords: Coords) => void;
+  setSelectedKeywordCodes: (selectedKeywordCodes: string[]) => void;
+  setLocation: (location: string) => void;
 };
 
 export type LoginSettingSlice = State & Action;
 
 const createLoginSettingSlice = create<LoginSettingSlice>((set) => ({
   name: '',
-  keywords: keywordDummy,
-  coords: null,
+  selectedKeywordCodes: [],
+  location: '',
   setName: (name) => set({ name }),
-  setKeywords: (keywords) => set({ keywords }),
-  setCoords: (coords) => set({ coords }),
+  setSelectedKeywordCodes: (selectedKeywordCodes) => set({ selectedKeywordCodes }),
+  setLocation: (location) => set({ location }),
 }));
 
 export default createLoginSettingSlice;

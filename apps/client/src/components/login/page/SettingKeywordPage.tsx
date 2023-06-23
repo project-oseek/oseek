@@ -1,33 +1,55 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
 import { TextToggle } from '@oseek/ui';
-import { range } from '@oseek/lib';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
-import { LoginHeading } from '../LoginHeading';
+import { CodeResDto } from '@oseek/apis';
+import { useGetFoodKeyword } from '@queries/code';
+import { MAX_FOOD_KEYWORD_LENGTH } from '@constant/foodKeyword';
 import { LoginHeader } from '../LoginHeader';
 import { BodySection, ContentSection, BottomSheet } from '../../section';
+import { LoginHeading } from '../LoginHeading';
 
 export const SettingKeywordPage = () => {
   const router = useRouter();
-  const [keywords, setKeywords] = createLoginSettingSlice((state) => [state.keywords, state.setKeywords]);
+  const [selectedKeywordCodes, setSelectedKeywordCodes] = createLoginSettingSlice((state) => [state.selectedKeywordCodes, state.setSelectedKeywordCodes]);
+  const { data: responseFoodKeywords } = useGetFoodKeyword();
+
+  const getMappedFoodKeywords = (foodKeywords?: CodeResDto[]) => {
+    if (!Array.isArray(foodKeywords)) {
+      return [];
+    }
+    return foodKeywords.map((keyword) => ({
+      emoji: '🥘', // FIXME: emoji
+      text: keyword.codeName,
+      code: keyword.code,
+    }));
+  };
+
+  const mappedKeywords = getMappedFoodKeywords(responseFoodKeywords || []);
 
   const handleNextClick = () => {
     router.push('/login/setting-location');
   };
 
-  const handleKeywordClick = (n: number) => {
-    const data = keywords.map((keyword, index) =>
-      index === n
-        ? {
-            ...keyword,
-            checked: !keyword.checked,
-          }
-        : keyword,
-    );
-    setKeywords(data);
+  const handleKeywordClick = (code: string) => {
+    const isSelectedFoodKeyword = selectedKeywordCodes.includes(code);
+
+    if (isSelectedFoodKeyword) {
+      setSelectedKeywordCodes(selectedKeywordCodes.filter((selectedKeyword) => selectedKeyword !== code));
+      return;
+    }
+
+    if (selectedKeywordCodes.length >= MAX_FOOD_KEYWORD_LENGTH && !isSelectedFoodKeyword) {
+      alert('최대 5개까지 선택 가능해요.');
+      return;
+    }
+
+    setSelectedKeywordCodes([...selectedKeywordCodes, code]);
   };
+
+  const disabledBottomSheet = selectedKeywordCodes.length === 0;
 
   return (
     <>
@@ -44,12 +66,22 @@ export const SettingKeywordPage = () => {
           description={<>알려주시면 딱 맞는 식당을 추천해 드릴게요.</>}
         />
         <ContentSection>
-          {keywords.map((keyword, index) => (
-            <TextToggle key={`${keyword.text}+${index}`} index={index} emoji={keyword.emoji} text={keyword.text} checked={keyword.checked} onClick={handleKeywordClick} />
-          ))}
+          {mappedKeywords.map((keyword, index) => {
+            const isCheckedFoodKeyword = typeof keyword.code === 'string' && selectedKeywordCodes.includes(keyword.code);
+            return (
+              <TextToggle
+                key={`${keyword.text}+${index}`}
+                emoji={keyword.emoji}
+                text={keyword.text || ''}
+                code={keyword.code || ''}
+                checked={isCheckedFoodKeyword}
+                onClick={handleKeywordClick}
+              />
+            );
+          })}
         </ContentSection>
       </BodySection>
-      <BottomSheet onClick={handleNextClick} />
+      <BottomSheet disabled={disabledBottomSheet} onClick={handleNextClick} />
     </>
   );
 };
