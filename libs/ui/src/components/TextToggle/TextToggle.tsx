@@ -7,16 +7,16 @@ import { styleToken } from '../../core';
 import Check from '../../Icons/Check';
 
 type Props = {
-  index: number;
   checked?: boolean;
   emoji: string;
   text: string;
-  onClick: (index: number) => void;
+  code: string;
+  onClick: (code: string) => void;
 };
 
-export const TextToggle = ({ index, checked, emoji, text, onClick }: Props) => {
+export const TextToggle = ({ checked, emoji, text, code, onClick }: Props) => {
   const handleClick = () => {
-    onClick(index);
+    onClick(code);
   };
   return (
     <button className={clsx(S.container, checked && S.activeContainer)} onClick={handleClick}>
