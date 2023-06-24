@@ -3,7 +3,7 @@
 import React, { useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button, Crosshair, IconButton, Search, styleToken, TextField, Typography } from '@oseek/ui';
-import { locationAPI } from '@oseek/apis';
+import { locationAPI, LocationResDto } from '@oseek/apis';
 import { useGetLocation } from '@queries/code/useGetLocation.get';
 import { LocationList } from '@components/location';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
@@ -32,8 +32,6 @@ export const SettingLocationPage = () => {
     const { coords } = potison;
     const currentLocation = await locationAPI.findMemberLocationDetailAxios(coords.latitude, coords.longitude);
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     const regionName = `${currentLocation.data?.region_1depth_name} ${currentLocation.data?.region_2depth_name} ${currentLocation.data?.region_3depth_name}`;
     const isJeju = getCheckLocationJeju(regionName);
 

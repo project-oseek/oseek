@@ -37,18 +37,18 @@ export interface LocationResDto {
      * @type {string}
      * @memberof LocationResDto
      */
-    'region1depthName'?: string;
+    'region_1depth_name'?: string;
     /**
      * 구
      * @type {string}
      * @memberof LocationResDto
      */
-    'region2depthName'?: string;
+    'region_2depth_name'?: string;
     /**
      * 동
      * @type {string}
      * @memberof LocationResDto
      */
-    'region3depthName'?: string;
+    'region_3depth_name'?: string;
 }
 

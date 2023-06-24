@@ -22,16 +22,16 @@
 export interface RestaurantSearchReqDto {
     /**
      * 경도
-     * @type {string}
+     * @type {number}
      * @memberof RestaurantSearchReqDto
      */
-    'longitude'?: string;
+    'longitude'?: number;
     /**
      * 위도
-     * @type {string}
+     * @type {number}
      * @memberof RestaurantSearchReqDto
      */
-    'latitude'?: string;
+    'latitude'?: number;
     /**
      * 지역
      * @type {string}
@@ -39,22 +39,31 @@ export interface RestaurantSearchReqDto {
      */
     'region'?: string;
     /**
-     * 음식 취향 list
+     * 음식 취향 list, code/food_keyword
      * @type {Array<string>}
      * @memberof RestaurantSearchReqDto
      */
-    'foodKeywords'?: Array<string>;
+    'memberFoodKeywords'?: Array<string> | null;
     /**
-     * 음식점 분류
+     * 음식점 분류(KOREAN, JAPANESE, CHINESE...)
      * @type {string}
      * @memberof RestaurantSearchReqDto
      */
     'category'?: string | null;
     /**
-     * 정렬 기준
+     * 정렬 기준(DISTANCE(거리순), NAME(이름순), RATE(별점순))
      * @type {string}
      * @memberof RestaurantSearchReqDto
      */
-    'sortStandard'?: string;
+    'sortStandard'?: RestaurantSearchReqDtoSortStandard;
 }
+
+export const RestaurantSearchReqDtoSortStandard = {
+    DISTANCE: 'DISTANCE',
+    NAME: 'NAME',
+    RATE: 'RATE'
+} as const;
+
+export type RestaurantSearchReqDtoSortStandard = typeof RestaurantSearchReqDtoSortStandard[keyof typeof RestaurantSearchReqDtoSortStandard];
+
 
