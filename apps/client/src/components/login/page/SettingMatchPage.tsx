@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
+import { memberApi, memberFoodKeywordApi } from '@oseek/apis';
+import { LOCATION_KEY, NICKNAME_KEY, setLocalStorageItem } from '@oseek/lib';
 import { LoginHeader } from '../LoginHeader';
 import { BodySection, ContentSection } from '../../section';
 import { LoginHeading } from '../LoginHeading';
-import { memberApi, memberFoodKeywordApi } from '@oseek/apis';
-import { LOCATION_KEY, NICKNAME_KEY, setLocalStorageItem } from '@oseek/lib';
 
 export const SettingMatchPage = () => {
   const router = useRouter();
@@ -18,12 +18,16 @@ export const SettingMatchPage = () => {
 
     try {
       const { data: responseMember } = await memberApi.modifyMemberInfoAxios({ location, nickname: name });
+      if (!responseMember) {
+        throw new Error('회원 정보 수정 실정에 실패했습니다.');
+      }
       setLocalStorageItem(NICKNAME_KEY, responseMember.nickname);
       setLocalStorageItem(LOCATION_KEY, responseMember.location);
       await memberFoodKeywordApi.saveMemberFoodKeywordAxios(foodKeywords);
-      router.replace('/');
     } catch (e) {
       console.error(e);
+    } finally {
+      router.replace('/');
     }
   };
 
