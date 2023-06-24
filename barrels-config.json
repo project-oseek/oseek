@@ -1,6 +1,6 @@
 {
   "delete": true,
-  "directory": ["./libs/lib/src", "./libs/ui/src/components", "./apps/client/src/components"],
+  "directory": ["./libs/lib/src", "./libs/ui/src/components", "./apps/client/src/components", "./apps/client/src/constant", "./apps/client/src/queries"],
   "exclude": [".spec.tsx", ".stories.tsx", ".css.ts", "./libs/apis/src/o"],
   "location": "all",
   "singleQuotes": true

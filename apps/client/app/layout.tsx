@@ -1,6 +1,6 @@
 import './global.css';
 import { PropsWithChildren } from 'react';
-import { Layout, OverlayProvider } from '@oseek/ui';
+import { Layout, OverlayProvider, ReactQueryProvider } from '@oseek/ui';
 
 export const metadata = {
   title: {
@@ -13,9 +13,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="ko">
       <body>
-        <Layout>
-          <OverlayProvider>{children}</OverlayProvider>
-        </Layout>
+        <ReactQueryProvider>
+          <Layout>
+            <OverlayProvider>{children}</OverlayProvider>
+          </Layout>
+        </ReactQueryProvider>
       </body>
     </html>
   );

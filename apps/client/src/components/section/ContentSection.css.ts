@@ -1,9 +1,11 @@
 import { style } from '@vanilla-extract/css';
 
 export const container = style({
-  padding: '40px 28px 0 20px',
+  height: '100%',
+  padding: '40px 24px 0 24px',
 });
 
 export const content = style({
+  height: '100%',
   padding: '0 0 40px 0',
 });

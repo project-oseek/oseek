@@ -1,12 +1,12 @@
 'use client';
 
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { TextField } from '@oseek/ui';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
-import { LoginHeading } from '../LoginHeading';
 import { LoginHeader } from '../LoginHeader';
 import { BodySection, ContentSection, BottomSheet } from '../../section';
+import { LoginHeading } from '../LoginHeading';
 
 export const SettingNamePage = () => {
   const router = useRouter();

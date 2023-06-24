@@ -20,6 +20,9 @@
     "baseUrl": ".",
     "paths": {
       "@store/*": ["src/store/*"],
+      "@queries/*": ["src/queries/*"],
+      "@constant/*": ["src/constant/*"],
+      "@components/*": ["src/components/*"],
       "@oseek/lib": ["../../libs/lib/src/index.ts"],
       "@oseek/ui": ["../../libs/ui/src/index.ts"],
       "@oseek/ui/core": ["../../libs/ui/src/core"],
