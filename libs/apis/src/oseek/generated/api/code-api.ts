@@ -22,21 +22,25 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
 // @ts-ignore
-import { NoticeResDto } from '../models';
+import { CodeResDto } from '../models';
 /**
- * NoticeApi - axios parameter creator
+ * CodeApi - axios parameter creator
  * @export
  */
-export const NoticeApiAxiosParamCreator = function (configuration?: Configuration) {
+export const CodeApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * 공지사항 list를 반환합니다.
-         * @summary 공지사항 조회
+         * codeGroup 기준으로 코드를 조회합니다.
+         * @summary 코드 조회
+         * @param {string} codeGroup 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        findNotices: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/notice`;
+        findCodes: async (codeGroup: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'codeGroup' is not null or undefined
+            assertParamExists('findCodes', 'codeGroup', codeGroup)
+            const localVarPath = `/code/{codeGroup}`
+                .replace(`{${"codeGroup"}}`, encodeURIComponent(String(codeGroup)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -67,59 +71,62 @@ export const NoticeApiAxiosParamCreator = function (configuration?: Configuratio
 };
 
 /**
- * NoticeApi - functional programming interface
+ * CodeApi - functional programming interface
  * @export
  */
-export const NoticeApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = NoticeApiAxiosParamCreator(configuration)
+export const CodeApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = CodeApiAxiosParamCreator(configuration)
     return {
         /**
-         * 공지사항 list를 반환합니다.
-         * @summary 공지사항 조회
+         * codeGroup 기준으로 코드를 조회합니다.
+         * @summary 코드 조회
+         * @param {string} codeGroup 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async findNotices(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<NoticeResDto>>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.findNotices(options);
+        async findCodes(codeGroup: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<CodeResDto>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.findCodes(codeGroup, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
 };
 
 /**
- * NoticeApi - factory interface
+ * CodeApi - factory interface
  * @export
  */
-export const NoticeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = NoticeApiFp(configuration)
+export const CodeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = CodeApiFp(configuration)
     return {
         /**
-         * 공지사항 list를 반환합니다.
-         * @summary 공지사항 조회
+         * codeGroup 기준으로 코드를 조회합니다.
+         * @summary 코드 조회
+         * @param {string} codeGroup 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        findNotices(options?: any): AxiosPromise<Array<NoticeResDto>> {
-            return localVarFp.findNotices(options).then((request) => request(axios, basePath));
+        findCodes(codeGroup: string, options?: any): AxiosPromise<Array<CodeResDto>> {
+            return localVarFp.findCodes(codeGroup, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * NoticeApi - object-oriented interface
+ * CodeApi - object-oriented interface
  * @export
- * @class NoticeApi
+ * @class CodeApi
  * @extends {BaseAPI}
  */
-export class NoticeApi extends BaseAPI {
+export class CodeApi extends BaseAPI {
     /**
-     * 공지사항 list를 반환합니다.
-     * @summary 공지사항 조회
+     * codeGroup 기준으로 코드를 조회합니다.
+     * @summary 코드 조회
+     * @param {string} codeGroup 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof NoticeApi
+     * @memberof CodeApi
      */
-    public findNoticesAxios(options?: AxiosRequestConfig) {
-        return NoticeApiFp(this.configuration).findNotices(options).then((request) => request(this.axios, this.basePath));
+    public findCodesAxios(codeGroup: string, options?: AxiosRequestConfig) {
+        return CodeApiFp(this.configuration).findCodes(codeGroup, options).then((request) => request(this.axios, this.basePath));
     }
 }

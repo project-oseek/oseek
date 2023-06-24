@@ -13,6 +13,18 @@
  */
 
 
-export * from "./api";
-export * from "./configuration";
-export * from "./models";
+
+/**
+ * 음식 키워드 정보 수정 요청 DTO
+ * @export
+ * @interface MemberFoodKeywordReqDto
+ */
+export interface MemberFoodKeywordReqDto {
+    /**
+     * 음식 키워드
+     * @type {string}
+     * @memberof MemberFoodKeywordReqDto
+     */
+    'foodKeyword'?: string;
+}
+

@@ -1,42 +1,58 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig, InternalAxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 import qs from 'query-string';
-
+import { getAccessTokenByLocalStorage, getRefreshTokenByLocalStorage, setLocalStorageItem } from '@oseek/lib/utils';
+import { ACCESS_TOKEN_KEY } from '@oseek/lib';
 import { AXIOS_TIMEOUT, OSEEK_API_URL } from './constants';
-
-// Todo: axios instance 기본 세팅 및 error 처리에 대한 합의 필요
-// 개인적으로는 Sentry도 도입해보는것도 나쁘지 않을거 같습니다
+import { AuthApi } from './oseek/generated';
 
 const baseAxios = axios.create({
   baseURL: OSEEK_API_URL,
   timeout: AXIOS_TIMEOUT,
   timeoutErrorMessage: '서버 요청 시간 초과',
   withCredentials: true,
-  paramsSerializer: (params) => {
-    return qs.stringify(params, { arrayFormat: 'comma' });
-  },
+  paramsSerializer: (params) => qs.stringify(params, { arrayFormat: 'comma' }),
 });
 
-baseAxios.interceptors.request.use(
-  (config) => {
-    return config;
-  },
-  (error) => {
-    return Promise.reject(error);
-  },
-);
+const handleHeadersWithAccessToken = (config: AxiosRequestConfig): InternalAxiosRequestConfig<any> => {
+  const accessToken = getAccessTokenByLocalStorage() || '';
+  config.headers = {
+    ...config.headers,
+    Authorization: `Bearer ${accessToken}`,
+    'Content-Type': 'application/json',
+  };
+  return config as InternalAxiosRequestConfig<any>;
+};
 
-baseAxios.interceptors.request.use(
-  (config) => {
-    return config;
-  },
-  (error) => {
-    // Sentry
-    return Promise.reject(error);
-  },
-);
+const handleErrorResponses = async (error: AxiosError) => {
+  const previousRequest: AxiosRequestConfig<any> & { _retried?: boolean } = error.config || {};
+  const { status } = error.response as AxiosResponse;
 
-baseAxios.interceptors.response.use((response) => {
-  return response;
-});
+  if (status === 401 && !previousRequest._retried) {
+    previousRequest._retried = true;
+    const refreshToken = getRefreshTokenByLocalStorage();
+
+    if (refreshToken) {
+      try {
+        const {
+          data: { accessToken },
+        } = await new AuthApi().regenerateTokenAxios({ refreshToken });
+        setLocalStorageItem(ACCESS_TOKEN_KEY, accessToken);
+        previousRequest.headers = {
+          ...previousRequest.headers,
+          Authorization: `Bearer ${accessToken}`,
+        };
+        return baseAxios(previousRequest);
+      } catch {
+        error.message = '토큰 갱신 실패. 다시 로그인해주세요.';
+      }
+    }
+  }
+
+  return Promise.reject(error);
+};
+
+baseAxios.interceptors.request.use(handleHeadersWithAccessToken, Promise.reject);
+
+baseAxios.interceptors.response.use((response) => response.data, handleErrorResponses);
 
 export default baseAxios;

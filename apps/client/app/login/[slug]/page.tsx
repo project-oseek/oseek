@@ -1,9 +1,9 @@
 import React from 'react';
-import { SettingKeywordPage, SettingLocationPage, SettingMatchPage, SettingNamePage } from '../../../src/components/login/page';
+import { SettingKeywordPage, SettingLocationPage, SettingMatchPage, SettingNamePage } from '@components/login';
 
 type Props = {
   params: {
-    slug: 'setting-name' | 'setting-keyword' | 'setting-location' | 'setting-match';
+    slug: 'setting-name' | 'setting-location' | 'setting-match';
   };
 };
 

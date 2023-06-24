@@ -3,3 +3,4 @@
  */
 
 export * from './apiKey';
+export * from './tokenKey';

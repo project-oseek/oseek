@@ -5,3 +5,4 @@
 export * from './array';
 export * from './number';
 export * from './query';
+export * from './storage';
