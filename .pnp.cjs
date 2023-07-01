@@ -81,6 +81,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:29.5.0"],\
             ["jest-environment-jsdom", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:29.5.0"],\
             ["jsdom", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:20.0.3"],\
+            ["lodash-es", "npm:4.17.21"],\
             ["next", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:13.4.1"],\
             ["nx", "virtual:39adc860d987b09f4bd6329aa2f3377b89f180b56aed95ffc63e92aeb7b90f50520413f55cc640fde28db3c67c2678555332e288bd0aa253795d3a261bd5dc9b#npm:16.2.1"],\
             ["nx-cloud", "npm:16.0.5"],\
@@ -5024,6 +5025,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:29.5.0"],\
             ["jest-environment-jsdom", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:29.5.0"],\
             ["jsdom", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:20.0.3"],\
+            ["lodash-es", "npm:4.17.21"],\
             ["next", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:13.4.1"],\
             ["nx", "virtual:39adc860d987b09f4bd6329aa2f3377b89f180b56aed95ffc63e92aeb7b90f50520413f55cc640fde28db3c67c2678555332e288bd0aa253795d3a261bd5dc9b#npm:16.2.1"],\
             ["nx-cloud", "npm:16.0.5"],\
@@ -14863,6 +14865,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/",\
           "packageDependencies": [\
             ["lodash", "npm:4.17.21"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lodash-es", [\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/lodash-es-npm-4.17.21-b45832dfce-05cbffad6e.zip/node_modules/lodash-es/",\
+          "packageDependencies": [\
+            ["lodash-es", "npm:4.17.21"]\
           ],\
           "linkType": "HARD"\
         }]\
