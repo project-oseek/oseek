@@ -6,11 +6,12 @@ import { Favorite, Typography, COLOR_PROPERTIES, Like } from '@oseek/ui';
 import * as S from './ShopCard.css';
 import { Label } from '../label';
 import { Divider } from '../divider';
+import ShopImg from './shop.png';
 
 export const ShopCardBig = () => {
   return (
     <div className={S.BigContainer}>
-      <Image src="" alt="식당 사진" height={220} className={S.BigImage} />
+      <Image src={ShopImg} alt="식당 사진" width={100} height={220} className={S.BigImage} />
       <div className={S.BigInfoContainer}>
         <main>
           <div className={S.BigInfoTitleContainer}>
@@ -57,7 +58,7 @@ export const ShopCardBig = () => {
 export const ShopCardSmall = () => {
   return (
     <div className={S.SmallContainer}>
-      <Image src="" alt="식당 사진" height={120} className={S.SmallImage} />
+      <Image src={ShopImg} alt="식당 사진" width={100} height={120} className={S.SmallImage} />
       <main className={S.SmallTitleContainer}>
         <Typography variant="ST1">꽃길 국수</Typography>
         <Typography variant="B2" className={S.gray1Color}>

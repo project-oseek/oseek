@@ -28,6 +28,14 @@ export const Label = style({
   gap: 4,
   border: `1px solid ${color.gray3}`,
   borderRadius: 30,
+  cursor: 'pointer',
+});
+
+export const ActiveLabel = style({
+  backgroundColor: 'rgba(54, 115, 238, 0.10)',
+  border: `1px solid ${color.primary}`,
+
+  '& *': { color: color.primary },
 });
 
 export const RecommendContainer = style({

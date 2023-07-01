@@ -26,6 +26,7 @@ export const BigImage = style({
   borderRadius: 24,
   marginBottom: 16,
   backgroundColor: color.gray2,
+  width: '100%',
 });
 
 export const BigInfoContainer = style({
@@ -80,6 +81,7 @@ export const SmallImage = style({
   borderRadius: 10,
   backgroundColor: color.gray2,
   marginBottom: 8,
+  width: '100%',
 });
 
 export const SmallTitleContainer = style({
