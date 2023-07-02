@@ -2,12 +2,10 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 
 import { IconButton, ArrowLeft, Home, COLOR_PROPERTIES } from '@oseek/ui';
 import { MainLayout } from '@components/layout';
-import ShopImg from './shop.png';
-import * as S from './page.css';
+import { ShopMain } from '@components/shop';
 
 type Props = {
   params: {
@@ -17,8 +15,6 @@ type Props = {
 
 export default function Page({ params }: Props) {
   const router = useRouter();
-  console.log(params.id);
-  // console.log(S);
 
   return (
     <MainLayout
@@ -39,9 +35,7 @@ export default function Page({ params }: Props) {
         />
       }
     >
-      <div>
-        <Image src={ShopImg} width={100} height={220} alt="식당 이름" style={{ width: '100%' }} />
-      </div>
+      <ShopMain />
     </MainLayout>
   );
 }

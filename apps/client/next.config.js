@@ -20,7 +20,6 @@ const nextConfig = {
       },
     },
   },
-  reactStrictMode: true,
 };
 
 const plugins = [
