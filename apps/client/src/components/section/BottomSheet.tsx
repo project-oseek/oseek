@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '@oseek/ui';
 
 import * as S from './BottomSheet.css';

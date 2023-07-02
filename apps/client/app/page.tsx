@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { ChevronDown, COLOR_PROPERTIES, IconButton, Map, Typography } from '@oseek/ui';
+import { ChevronDown, COLOR_PROPERTIES, Map, Typography } from '@oseek/ui';
 import { Container, Intro, MainLayout, Category, Preview, Recommend } from '../src/components';
 import * as S from './page.css';
 

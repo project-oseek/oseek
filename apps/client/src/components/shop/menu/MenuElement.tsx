@@ -1,11 +1,11 @@
-import React, { HTMLAttributes, ReactElement } from 'react';
-import Image from 'next/image';
+import { HTMLAttributes, ReactElement } from 'react';
+import Image, { StaticImageData } from 'next/image';
 
 import { Container } from '@components/layout';
 import { COLOR_PROPERTIES, Typography } from '@oseek/ui';
 import * as S from './MenuElement.css';
 
-type Props = { title: ReactElement; description: ReactElement; price: ReactElement; imgSrc?: string } & HTMLAttributes<HTMLDivElement>;
+type Props = { title: ReactElement | string; description: ReactElement | string; price: number; imgSrc?: string | StaticImageData } & HTMLAttributes<HTMLDivElement>;
 
 export const MenuElement = ({ title, description, price, imgSrc }: Props) => {
   return (

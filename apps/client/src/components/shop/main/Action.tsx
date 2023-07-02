@@ -1,11 +1,11 @@
-import React, { PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 
 import * as S from './Action.css';
 import { IconButton } from '@oseek/ui';
 
 type Props = {
   icon: ReactElement;
-  title: ReactElement;
+  title: ReactElement | string;
 };
 
 export const Action = ({ icon, title }: PropsWithChildren<Props>) => {

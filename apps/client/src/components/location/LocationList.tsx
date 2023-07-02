@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { Typography } from '@oseek/ui';
 import * as S from './LocationList.css';
 

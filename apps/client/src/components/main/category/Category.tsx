@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Typography } from '@oseek/ui';
 import { CategoryList } from './CategoryList';
 

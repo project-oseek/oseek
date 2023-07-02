@@ -51,6 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:14.0.0"],\
             ["@types/axios", "npm:0.14.0"],\
             ["@types/jest", "npm:29.5.1"],\
+            ["@types/lodash-es", "npm:4.17.7"],\
             ["@types/node", "npm:18.14.2"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", "npm:18.0.11"],\
@@ -4995,6 +4996,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:d0a42ef4bb63a5bb9b43bbba363430777b1c288b016632039355f31d5a984305c359767c2425556a94a290d4d910fd2523773e8b388be73189d92038bc7ce787#npm:14.0.0"],\
             ["@types/axios", "npm:0.14.0"],\
             ["@types/jest", "npm:29.5.1"],\
+            ["@types/lodash-es", "npm:4.17.7"],\
             ["@types/node", "npm:18.14.2"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", "npm:18.0.11"],\
@@ -7218,6 +7220,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.194-f099c0742e-113f34831c.zip/node_modules/@types/lodash/",\
           "packageDependencies": [\
             ["@types/lodash", "npm:4.14.194"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.14.195", {\
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.195-a2a8254638-39b75ca635.zip/node_modules/@types/lodash/",\
+          "packageDependencies": [\
+            ["@types/lodash", "npm:4.14.195"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/lodash-es", [\
+        ["npm:4.17.7", {\
+          "packageLocation": "./.yarn/cache/@types-lodash-es-npm-4.17.7-7322f70ff2-4b1f39fd1d.zip/node_modules/@types/lodash-es/",\
+          "packageDependencies": [\
+            ["@types/lodash-es", "npm:4.17.7"],\
+            ["@types/lodash", "npm:4.14.195"]\
           ],\
           "linkType": "HARD"\
         }]\

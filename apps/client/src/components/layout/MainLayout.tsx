@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 
 import { AppBar, ArrowLeft, BottomNavigation, IconButton, Search } from '@oseek/ui';
 import { BodySection } from '../section';

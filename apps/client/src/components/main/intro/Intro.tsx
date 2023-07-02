@@ -1,5 +1,3 @@
-import React from 'react';
-
 import * as S from './Intro.css';
 import { Typography } from '@oseek/ui';
 import { Container } from '../../layout';

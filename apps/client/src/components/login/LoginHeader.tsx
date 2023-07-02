@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useRouter } from 'next/navigation';
 import { AppBar, ArrowLeft, IconButton, Refresh, styleToken } from '@oseek/ui';
 

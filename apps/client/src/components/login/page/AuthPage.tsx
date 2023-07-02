@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY, setLocalStorageItem } from '@oseek/lib';
 

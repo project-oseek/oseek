@@ -34,8 +34,10 @@ export const Label = style({
 export const ActiveLabel = style({
   backgroundColor: 'rgba(54, 115, 238, 0.10)',
   border: `1px solid ${color.primary}`,
+});
 
-  '& *': { color: color.primary },
+export const ActiveLabelText = style({
+  color: color.primary,
 });
 
 export const RecommendContainer = style({

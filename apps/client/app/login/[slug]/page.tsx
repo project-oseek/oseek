@@ -1,4 +1,3 @@
-import React from 'react';
 import { SettingKeywordPage, SettingLocationPage, SettingMatchPage, SettingNamePage } from '@components/login';
 
 type Props = {

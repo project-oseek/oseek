@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
 import { memberApi, memberFoodKeywordApi } from '@oseek/apis';

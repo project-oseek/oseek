@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import { HTMLAttributes } from 'react';
 
 type Props = {
   padding?: string | number;
