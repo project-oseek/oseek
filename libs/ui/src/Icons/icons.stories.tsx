@@ -27,6 +27,10 @@ import {
   Photo,
   Status,
   SnsKakao,
+  Copy,
+  Phone,
+  Share,
+  Time,
 } from './index';
 import * as S from './icons.css';
 
@@ -122,6 +126,18 @@ export const List: Story = (args) => {
       </Icon>
       <Icon name="Status">
         <Status {...args} />
+      </Icon>
+      <Icon name="Copy">
+        <Copy {...args} />
+      </Icon>
+      <Icon name="Phone">
+        <Phone {...args} />
+      </Icon>
+      <Icon name="Share">
+        <Share {...args} />
+      </Icon>
+      <Icon name="Time">
+        <Time {...args} />
       </Icon>
     </Wrapper>
   );
