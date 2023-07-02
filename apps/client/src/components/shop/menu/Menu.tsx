@@ -1,25 +1,24 @@
-import React, { HTMLAttributes, ReactElement } from 'react';
-import Image from 'next/image';
-
+import { MenuElement } from '@components/shop';
+import MenuShopImg from '@components/shop/menu/shop.png';
 import { Container } from '@components/layout';
-import { COLOR_PROPERTIES, Typography } from '@oseek/ui';
-import * as S from './Menu.css';
 
-type Props = { title: ReactElement; description: ReactElement; price: ReactElement; imgSrc?: string } & HTMLAttributes<HTMLDivElement>;
-
-export const Menu = ({ title, description, price, imgSrc }: Props) => {
+export const Menu = () => {
   return (
-    <Container padding="20px 16px" className={S.Container}>
-      <div className={S.Detail}>
-        <Typography variant="ST3">{title}</Typography>
-        <Typography variant="D1" style={{ color: COLOR_PROPERTIES.gray1 }}>
-          {description}
-        </Typography>
-        <Typography variant="ST2" style={{ color: COLOR_PROPERTIES.primary }}>
-          {price.toLocaleString()}원
-        </Typography>
-      </div>
-      {imgSrc && <Image src={imgSrc} width={80} height={80} alt="가게" className={S.Image} />}
+    <Container padding={0}>
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} imgSrc={MenuShopImg} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} imgSrc={MenuShopImg} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <MenuElement title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
     </Container>
   );
 };

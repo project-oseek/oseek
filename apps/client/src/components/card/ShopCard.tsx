@@ -7,10 +7,18 @@ import * as S from './ShopCard.css';
 import { Label } from '../label';
 import { Divider } from '../divider';
 import ShopImg from './shop.png';
+import { useRouter } from 'next/navigation';
 
 export const ShopCardBig = () => {
+  const router = useRouter();
+
   return (
-    <div className={S.BigContainer}>
+    <div
+      className={S.BigContainer}
+      onClick={() => {
+        router.push('/shop/22');
+      }}
+    >
       <Image src={ShopImg} alt="식당 사진" width={100} height={220} className={S.BigImage} />
       <div className={S.BigInfoContainer}>
         <main>
