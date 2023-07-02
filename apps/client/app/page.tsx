@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { ChevronDown, COLOR_PROPERTIES, IconButton, Map, Typography } from '@oseek/ui';
-import * as S from './page.css';
 import { Container, Intro, MainLayout, Menu, Preview, Recommend } from '../src/components';
+import * as S from './page.css';
 
 const { primary, black } = COLOR_PROPERTIES;
 
@@ -11,7 +11,7 @@ const IndexPage = async () => {
     <MainLayout
       activePath="/"
       leftAction={
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div className={S.LeftAction}>
           <Map color={black} />
           <Typography variant="ST1">애월읍</Typography>
           <ChevronDown color={primary} />
