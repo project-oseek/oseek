@@ -19,11 +19,15 @@ const FONT_SIZE_PROPERTIES = {
   heading2: '20',
   subtitle1: '16px',
   subtitle2: '14px',
-  body: '16px',
+  subtitle3: '14px',
+  body1: '16px',
+  body2: '14px',
+  description1: '12px',
 };
 
 const FONT_WEIGHT_PROPERTIES = {
   regular: '400',
+  medium: '500',
   bold: '700',
 };
 

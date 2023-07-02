@@ -9,7 +9,7 @@ const BASE = style({
   lineHeight: '150%',
 });
 
-export type VariantKeyType = 'H1' | 'H2' | 'ST1' | 'ST2' | 'B1' | 'B2';
+export type VariantKeyType = 'H1' | 'H2' | 'ST1' | 'ST2' | 'ST3' | 'B1' | 'B2' | 'D1';
 
 type VariantsType = {
   [K in VariantKeyType]: string;
@@ -20,6 +20,8 @@ export const VARIANTS: VariantsType = {
   H2: style([BASE, { fontWeight: fontWeight.bold, fontSize: fontSize.heading2, letterSpacing: '-0.02em' }]),
   ST1: style([BASE, { fontWeight: fontWeight.bold, fontSize: fontSize.subtitle1, letterSpacing: '-0.02em' }]),
   ST2: style([BASE, { fontWeight: fontWeight.bold, fontSize: fontSize.subtitle2, letterSpacing: '-0.01em' }]),
-  B1: style([BASE, { fontWeight: fontWeight.regular, fontSize: fontSize.body, letterSpacing: '-0.02em' }]),
-  B2: style([BASE, { fontWeight: fontWeight.regular, fontSize: fontSize.body, letterSpacing: '-0.01em' }]),
+  ST3: style([BASE, { fontWeight: fontWeight.medium, fontSize: fontSize.subtitle3, letterSpacing: '-0.01em' }]),
+  B1: style([BASE, { fontWeight: fontWeight.regular, fontSize: fontSize.body1, letterSpacing: '-0.28px' }]),
+  B2: style([BASE, { fontWeight: fontWeight.regular, fontSize: fontSize.body2, letterSpacing: '-0.01em' }]),
+  D1: style([BASE, { fontWeight: fontWeight.regular, fontSize: fontSize.description1, letterSpacing: '-0.12px' }]),
 };

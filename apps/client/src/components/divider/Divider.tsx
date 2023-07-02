@@ -3,8 +3,10 @@ import clsx from 'clsx';
 
 import * as S from './Divider.css';
 
-type Props = HTMLAttributes<HTMLDivElement>;
+type Props = {
+  type?: 'horizontal' | 'vertical';
+} & HTMLAttributes<HTMLDivElement>;
 
-export const Divider = ({ className, ...props }: Props) => {
-  return <div className={clsx([S.DividerBasic, className])} {...props} />;
+export const Divider = ({ type = 'vertical', className, ...props }: Props) => {
+  return <div className={clsx([S.DividerBasic, S.DividerTypeStyle[type], className])} {...props} />;
 };
