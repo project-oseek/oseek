@@ -20,6 +20,7 @@ export const BigContainer = style({
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: color.white,
+  cursor: 'pointer',
 });
 
 export const BigImage = style({

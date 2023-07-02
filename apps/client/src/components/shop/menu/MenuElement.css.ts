@@ -8,6 +8,7 @@ export const Container = style({
   display: 'flex',
   gap: 20,
   alignItems: 'center',
+  borderBottom: `1px solid ${color.gray3}`,
 });
 
 export const Detail = style({

@@ -2,11 +2,10 @@ import Image from 'next/image';
 
 import { Container } from '@components/layout';
 import { COLOR_PROPERTIES, Favorite, Like, Map, Share, Typography } from '@oseek/ui';
-import { Action, Menu } from '@components/shop';
+import { Action, Menu, Selection } from '@components/shop';
 import { Divider } from '@components/divider';
 import * as S from './Main.css';
 import ShopImg from './shop.png';
-import MenuShopImg from '../menu/shop.png';
 
 export const ShopMain = () => {
   return (
@@ -32,12 +31,7 @@ export const ShopMain = () => {
         </div>
       </Container>
       <Divider type="horizontal" style={{ backgroundColor: COLOR_PROPERTIES.coolGray }} />
-      <Menu title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} imgSrc={MenuShopImg} />
-      <Menu title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} imgSrc={MenuShopImg} />
-      <Menu title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
-      <Menu title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
-      <Menu title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
-      <Menu title="고등어 묵은지찜" description="제주도 애월읍 고등어찜 맛집으로 묵은지와 고등어가 조화를 이루어 일품입니다." price={36000} />
+      <Selection />
     </div>
   );
 };
