@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import queryString from 'query-string';
 import xor from 'lodash-es/xor';
@@ -46,7 +46,9 @@ export const RecommendCategory = () => {
             handleQuery('more');
           }}
         >
-          <Typography variant="B2">저장 많은</Typography>
+          <Typography variant="B2" className={clsx([checkLabelActive('more') && S.ActiveLabelText])}>
+            저장 많은
+          </Typography>
         </Label>
         <Label
           className={clsx([S.Label, checkLabelActive('hot') && S.ActiveLabel])}
@@ -54,7 +56,9 @@ export const RecommendCategory = () => {
             handleQuery('hot');
           }}
         >
-          <Typography variant="B2">요즘 뜨는</Typography>
+          <Typography variant="B2" className={clsx([checkLabelActive('hot') && S.ActiveLabelText])}>
+            요즘 뜨는
+          </Typography>
         </Label>
         <Label
           className={clsx([S.Label, checkLabelActive('takeout') && S.ActiveLabel])}
@@ -62,7 +66,9 @@ export const RecommendCategory = () => {
             handleQuery('takeout');
           }}
         >
-          <Typography variant="B2">테이크 아웃</Typography>
+          <Typography variant="B2" className={clsx([checkLabelActive('takeout') && S.ActiveLabelText])}>
+            테이크 아웃
+          </Typography>
         </Label>
       </div>
       <div className={S.RecommendContainer}>

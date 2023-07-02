@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import { HTMLAttributes, PropsWithChildren } from 'react';
 import clsx from 'clsx';
 
 import * as S from './Label.css';

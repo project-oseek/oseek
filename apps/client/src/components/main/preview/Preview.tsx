@@ -1,5 +1,3 @@
-import React from 'react';
-
 import * as S from './Preview.css';
 import { Container } from '../../layout';
 import { ShopCardSmall } from '../../card';

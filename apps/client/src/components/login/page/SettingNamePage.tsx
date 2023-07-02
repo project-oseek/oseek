@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ChangeEvent } from 'react';
+import { ChangeEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { TextField } from '@oseek/ui';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';

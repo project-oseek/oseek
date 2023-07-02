@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Typography } from '@oseek/ui';
 import { RecommendCategory } from './RecommendCategory';
 import * as S from './Recommend.css';

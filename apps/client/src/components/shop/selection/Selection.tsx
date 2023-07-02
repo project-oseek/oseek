@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import clsx from 'clsx';
 
 import { Container } from '@components/layout';
@@ -16,7 +16,9 @@ export const Selection = () => {
 
   const handleTabLeft = (index: number) => {
     setCurrentIndex(index);
-    tabRef.current.style.left = `${(100 / 3) * index}%`;
+    if (tabRef.current) {
+      tabRef.current.style.left = `${(100 / 3) * index}%`;
+    }
   };
 
   return (
@@ -31,7 +33,7 @@ export const Selection = () => {
           메뉴
         </Button>
         <Button
-          className={clsx([S.Button, , currentIndex === 1 && S.Active])}
+          className={clsx([S.Button, currentIndex === 1 && S.Active])}
           onClick={() => {
             handleTabLeft(1);
           }}
