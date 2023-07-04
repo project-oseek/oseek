@@ -5,10 +5,10 @@ import clsx from 'clsx';
 
 import { Container } from '@components/layout';
 import { Button } from '@oseek/ui';
-import { Menu } from '@components/shop';
+import { Info, Menu } from '@components/shop';
 import * as S from './Selection.css';
 
-const SelectionArray = [<Menu />, <Menu />, <Menu />];
+const SelectionArray = [<Menu />, <Info />, <Menu />];
 
 export const Selection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

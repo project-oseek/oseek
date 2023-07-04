@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { Container } from '@components/layout';
 import { COLOR_PROPERTIES, Favorite, Like, Map, Share, Typography } from '@oseek/ui';
-import { Action, Menu, Selection } from '@components/shop';
+import { Action } from '@components/shop';
 import { Divider } from '@components/divider';
 import * as S from './Main.css';
 import ShopImg from './shop.png';
@@ -22,16 +22,15 @@ export const ShopMain = () => {
         </Typography>
         <div className={S.ActionContainer}>
           <Action icon={<Favorite color={COLOR_PROPERTIES.primary} />} title="저장하기" />
-          <Divider style={{ height: 24 }} />
+          <Divider style={{ height: 24, margin: 0 }} />
           <Action icon={<Like color={COLOR_PROPERTIES.black} />} title="저장하기" />
-          <Divider style={{ height: 24 }} />
+          <Divider style={{ height: 24, margin: 0 }} />
           <Action icon={<Share color={COLOR_PROPERTIES.black} />} title="공유하기" />
-          <Divider style={{ height: 24 }} />
+          <Divider style={{ height: 24, margin: 0 }} />
           <Action icon={<Map color={COLOR_PROPERTIES.black} />} title="지도보기" />
         </div>
       </Container>
       <Divider type="horizontal" style={{ backgroundColor: COLOR_PROPERTIES.coolGray }} />
-      <Selection />
     </div>
   );
 };
