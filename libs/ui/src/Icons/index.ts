@@ -24,5 +24,6 @@ export { default as Search } from './Search';
 export { default as Share } from './Share';
 export { default as SnsKakao } from './SnsKakao';
 export { default as Status } from './Status';
+export { default as Store } from './Store';
 export { default as Time } from './Time';
 export { default as Bookmark } from './Bookmark';

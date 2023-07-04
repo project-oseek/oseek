@@ -31,6 +31,7 @@ import {
   Phone,
   Share,
   Time,
+  Store,
 } from './index';
 import * as S from './icons.css';
 
@@ -138,6 +139,9 @@ export const List: Story = (args) => {
       </Icon>
       <Icon name="Time">
         <Time {...args} />
+      </Icon>
+      <Icon name="Store">
+        <Store {...args} />
       </Icon>
     </Wrapper>
   );
