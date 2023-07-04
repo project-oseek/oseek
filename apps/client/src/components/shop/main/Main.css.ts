@@ -7,4 +7,4 @@ export const Container = style({
   gap: 24,
 });
 
-export const ActionContainer = style({ display: 'flex', gap: 20, alignItems: 'center', width: '100%' });
+export const ActionContainer = style({ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'space-between' });
