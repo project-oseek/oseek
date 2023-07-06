@@ -5,4 +5,5 @@
 export * from './info/index';
 export * from './main/index';
 export * from './menu/index';
+export * from './review/index';
 export * from './selection/index';

@@ -1,4 +1,4 @@
-import { MenuElement } from '@components/shop';
+import { MenuElement } from './MenuElement';
 import MenuShopImg from '@components/shop/menu/shop.png';
 import { Container } from '@components/layout';
 import { Typography } from '@oseek/ui';

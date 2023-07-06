@@ -8,7 +8,7 @@ const { color } = styleToken;
 
 export const Info = () => {
   return (
-    <Container padding="22.5px 16px" className={S.Container}>
+    <Container padding="24px 16px" className={S.Container}>
       <div className={S.InfoElement}>
         <Map color={color.gray1} />
         <div className={S.Detail}>

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { Container } from '@components/layout';
 import { COLOR_PROPERTIES, Favorite, Like, Map, Share, Typography } from '@oseek/ui';
-import { Action } from '@components/shop';
+import { Action } from './Action';
 import { Divider } from '@components/divider';
 import * as S from './Main.css';
 import ShopImg from './shop.png';

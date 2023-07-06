@@ -4,9 +4,7 @@ import { useRouter } from 'next/navigation';
 
 import { IconButton, ArrowLeft, Home, COLOR_PROPERTIES } from '@oseek/ui';
 import { MainLayout } from '@components/layout';
-import { ShopMain } from '@components/shop';
-import { Divider } from '@components/divider';
-import { Selection } from '@components/shop';
+import { ShopMain, Selection } from '@components/shop';
 
 type Props = {
   params: {
