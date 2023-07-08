@@ -3,3 +3,4 @@
  */
 
 export * from './foodKeyword';
+export * from './pageUrl';

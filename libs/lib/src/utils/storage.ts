@@ -1,4 +1,5 @@
-import { ACCESS_TOKEN_KEY, LOCATION_KEY, NICKNAME_KEY, REFRESH_TOKEN_KEY } from '../constants';
+import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY, USER_KEY } from '../constants';
+import { MemberInfoResDto } from '@oseek/apis';
 
 export const getLocalStorageItem = <T>(key: string): T | null => {
   if (typeof window !== 'undefined') {
@@ -28,6 +29,12 @@ export const setLocalStorageItem = <T>(key: string, value: T): void => {
   }
 };
 
+export const removeLocalStorageItem = (key: string): void => {
+  if (typeof window !== 'undefined') {
+    localStorage.removeItem(key);
+  }
+};
+
 export const getAccessTokenByLocalStorage = (): string | null => {
   const accessToken = getLocalStorageItem<string>(ACCESS_TOKEN_KEY);
   return accessToken || null;
@@ -38,12 +45,8 @@ export const getRefreshTokenByLocalStorage = (): string | null => {
   return refreshToken || null;
 };
 
-export const getNickNameByLocalStorage = (): string | null => {
-  const nickname = getLocalStorageItem<string>(NICKNAME_KEY);
-  return nickname || null;
-};
-
-export const getLocationByLocalStorage = (): string | null => {
-  const location = getLocalStorageItem<string>(LOCATION_KEY);
-  return location || null;
+export type UserType = Pick<MemberInfoResDto, 'nickname' | 'location'>;
+export const getUserByLocalStorage = (): UserType | null => {
+  const user = getLocalStorageItem<UserType>(USER_KEY);
+  return user || null;
 };
