@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
 import { memberApi, memberFoodKeywordApi } from '@oseek/apis';
-import { LOCATION_KEY, NICKNAME_KEY, setLocalStorageItem } from '@oseek/lib';
+import { setLocalStorageItem, USER_KEY } from '@oseek/lib';
+import { PAGE_URL } from '@constant/pageUrl';
 import { LoginHeader } from '../LoginHeader';
 import { BodySection, ContentSection } from '../../section';
 import { LoginHeading } from '../LoginHeading';
@@ -21,19 +22,21 @@ export const SettingMatchPage = () => {
       if (!responseMember) {
         throw new Error('회원 정보 수정 실정에 실패했습니다.');
       }
-      setLocalStorageItem(NICKNAME_KEY, responseMember.nickname);
-      setLocalStorageItem(LOCATION_KEY, responseMember.location);
+      setLocalStorageItem(USER_KEY, {
+        nickname: responseMember.nickname,
+        location: responseMember.location,
+      });
       await memberFoodKeywordApi.saveMemberFoodKeywordAxios(foodKeywords);
     } catch (e) {
       console.error(e);
     } finally {
-      router.replace('/');
+      router.replace(PAGE_URL.MAIN);
     }
   };
 
   useEffect(() => {
     if (!name || selectedKeywordCodes.length === 0 || !location) {
-      router.replace('/login/setting-name');
+      router.replace(PAGE_URL.SETTING_NAME);
       return;
     }
     requestUserSetting();
