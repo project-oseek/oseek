@@ -20,7 +20,7 @@ const DATA: { Icon: (args: SVGProps<SVGSVGElement>) => JSX.Element; path: string
   { Icon: (args) => <HomeFill {...args} />, path: '/' },
   { Icon: (args) => <Bookmark {...args} />, path: '/like' },
   { Icon: (args) => <Search {...args} />, path: '/search' },
-  { Icon: (args) => <MyPage {...args} />, path: '/my-page' },
+  { Icon: (args) => <MyPage {...args} />, path: '/settings' },
 ];
 
 export const BottomNavigation = ({ activePath = '/', className }: Props) => {
