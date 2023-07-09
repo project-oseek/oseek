@@ -40,7 +40,7 @@ export const SettingNamePage = () => {
           <TextField id="nick" label="닉네임" value={name} maxLength={12} onChange={handleChangeNickName} placeholder="김오식 (최대 N자)" focus />
         </ContentSection>
       </BodySection>
-      <BottomSheet disabled={disabledBottomSheet} onClick={handleNextClick} />
+      <BottomSheet text="다음" disabled={disabledBottomSheet} onClick={handleNextClick} />
     </>
   );
 };

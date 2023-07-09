@@ -4,14 +4,15 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import createLoginSettingSlice from '@store/slices/createLoginSettingSlice';
 import { memberApi, memberFoodKeywordApi } from '@oseek/apis';
-import { setLocalStorageItem, USER_KEY } from '@oseek/lib';
 import { PAGE_URL } from '@constant/pageUrl';
 import { LoginHeader } from '../LoginHeader';
 import { BodySection, ContentSection } from '../../section';
 import { LoginHeading } from '../LoginHeading';
+import { useAuth } from '../../provider';
 
 export const SettingMatchPage = () => {
   const router = useRouter();
+  const auth = useAuth();
   const [name, selectedKeywordCodes, location] = createLoginSettingSlice((state) => [state.name, state.selectedKeywordCodes, state.location]);
 
   const requestUserSetting = async () => {
@@ -19,10 +20,10 @@ export const SettingMatchPage = () => {
 
     try {
       const { data: responseMember } = await memberApi.modifyMemberInfoAxios({ location, nickname: name });
-      if (!responseMember) {
+      if (!responseMember.nickname || !responseMember.location) {
         throw new Error('회원 정보 수정 실정에 실패했습니다.');
       }
-      setLocalStorageItem(USER_KEY, {
+      auth.setUser({
         nickname: responseMember.nickname,
         location: responseMember.location,
       });

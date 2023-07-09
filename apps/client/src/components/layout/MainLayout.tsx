@@ -8,7 +8,7 @@ type Props = { activePath?: string; title?: string; leftAction?: ReactElement; r
 
 export const MainLayout = ({
   children,
-  activePath = '/',
+  activePath = '/settings',
   title = '',
   leftAction = <IconButton icon={<ArrowLeft color="#000" />} />,
   rightAction = <IconButton icon={<Search color="#000" style={{ marginLeft: 'auto' }} />} />,
