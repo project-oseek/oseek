@@ -5,15 +5,17 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY, getLocalStorageItem, setLocalStorageItem, USER_KEY } from '@oseek/lib';
 import { memberApi } from '@oseek/apis';
 import { PAGE_URL } from '@constant/pageUrl';
+import { useAuth } from '@components/provider';
 
 export const AuthPage = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const auth = useAuth();
 
   const handleTokens = (accessTokenQuery: string | null, refreshTokenQuery: string | null) => {
     if (accessTokenQuery && refreshTokenQuery) {
-      setLocalStorageItem(ACCESS_TOKEN_KEY, accessTokenQuery);
-      setLocalStorageItem(REFRESH_TOKEN_KEY, refreshTokenQuery);
+      auth.setAccessToken(accessTokenQuery);
+      auth.setRefreshToken(refreshTokenQuery);
       return true;
     }
     return false;
@@ -25,7 +27,7 @@ export const AuthPage = () => {
     } = await memberApi.findMemberInfoAxios();
 
     if (nickname) {
-      setLocalStorageItem(USER_KEY, { nickname, location });
+      auth.setUser({ nickname, location });
       router.replace(PAGE_URL.MAIN);
       return;
     }

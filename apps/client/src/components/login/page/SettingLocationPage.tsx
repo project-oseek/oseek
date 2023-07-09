@@ -93,7 +93,7 @@ export const SettingLocationPage = () => {
           <LocationList keyword={location} locations={locations} onLocationClick={handleLocationClick} />
         </ContentSection>
       </BodySection>
-      <BottomSheet onClick={handleNextClick} disabled={disabledBottomSheet} />
+      <BottomSheet text="다음" onClick={handleNextClick} disabled={disabledBottomSheet} />
     </>
   );
 };

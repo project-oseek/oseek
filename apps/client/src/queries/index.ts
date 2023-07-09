@@ -3,3 +3,4 @@
  */
 
 export * from './code/index';
+export * from './notice/index';

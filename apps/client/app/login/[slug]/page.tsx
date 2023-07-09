@@ -1,3 +1,5 @@
+'use client';
+
 import { SettingKeywordPage, SettingLocationPage, SettingMatchPage, SettingNamePage } from '@components/login';
 
 type Props = {

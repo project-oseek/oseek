@@ -11,5 +11,6 @@ export * from './login/index';
 export * from './main/index';
 export * from './provider/index';
 export * from './section/index';
+export * from './settings/index';
 export * from './shop/index';
 export * from './spacing/index';
